@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.13.5 on win32)" generated="2026-05-03T13:56:52.132304" rpa="false" schemaversion="5">
+<suite id="s1" name="Ui Tests &amp; Api Tests">
+<suite id="s1-s1" name="Ui Tests" source="C:\Users\kokon\Documents\QAReports\ui_tests">
+<suite id="s1-s1-s1" name="Tests" source="C:\Users\kokon\Documents\QAReports\ui_tests\tests">
+<suite id="s1-s1-s1-s1" name="Test E2E Purchase" source="C:\Users\kokon\Documents\QAReports\ui_tests\tests\test_e2e_purchase.robot">
+<test id="s1-s1-s1-s1-t1" name="Achat Complet Produit" line="9">
+<kw name="Ouvrir Page Login" owner="login_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:56:52.502752" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-03T13:56:52.502238" elapsed="3.207324"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-03T13:56:55.713201" elapsed="0.036689"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:56:52.501145" elapsed="3.249170"/>
+</kw>
+<kw name="Se Connecter Avec Credentials" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:56:55.752413" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>${USERNAME_INPUT}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-03T13:56:55.751558" elapsed="0.138389"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:56:55.892361" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-03T13:56:55.891776" elapsed="0.102121"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:56:55.995906" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-03T13:56:55.995462" elapsed="0.122878"/>
+</kw>
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2026-05-03T13:56:55.750976" elapsed="0.369304"/>
+</kw>
+<kw name="Ajouter Premier Produit Au Panier" owner="inventory_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:56:56.122312" level="INFO">Clicking button 'add-to-cart-sauce-labs-backpack'.</msg>
+<arg>add-to-cart-sauce-labs-backpack</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-03T13:56:56.121936" elapsed="0.100295"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:56:56.121297" elapsed="0.103190"/>
+</kw>
+<kw name="Aller Au Panier" owner="inventory_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:56:56.226019" level="INFO">Clicking element 'id:shopping_cart_container'.</msg>
+<arg>${CART_ICON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-03T13:56:56.225649" elapsed="0.092242"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:56:56.225252" elapsed="0.094269"/>
+</kw>
+<kw name="Aller Au Checkout" owner="cart_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:56:56.321448" level="INFO">Clicking button 'checkout'.</msg>
+<arg>checkout</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-03T13:56:56.321006" elapsed="0.102555"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:56:56.320393" elapsed="0.107369"/>
+</kw>
+<kw name="Remplir Informations Client" owner="checkout_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:56:56.429613" level="INFO">Typing text 'John' into text field 'id:first-name'.</msg>
+<arg>${FIRST_NAME}</arg>
+<arg>${first}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-03T13:56:56.429262" elapsed="0.118689"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:56:56.550441" level="INFO">Typing text 'Doe' into text field 'id:last-name'.</msg>
+<arg>${LAST_NAME}</arg>
+<arg>${last}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-03T13:56:56.549854" elapsed="0.121393"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:56:56.674297" level="INFO">Typing text '12345' into text field 'id:postal-code'.</msg>
+<arg>${POSTAL_CODE}</arg>
+<arg>${zip}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-03T13:56:56.673697" elapsed="0.097024"/>
+</kw>
+<arg>John</arg>
+<arg>Doe</arg>
+<arg>12345</arg>
+<status status="PASS" start="2026-05-03T13:56:56.428747" elapsed="0.343462"/>
+</kw>
+<kw name="Confirmer Achat" owner="checkout_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:56:56.773427" level="INFO">Clicking button 'id:finish'.</msg>
+<msg time="2026-05-03T13:56:56.857555" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-03T13:56:56.857925" level="FAIL">Button with locator 'id:finish' not found.</msg>
+<arg>${FINISH}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2026-05-03T13:56:56.773209" elapsed="0.092641">Button with locator 'id:finish' not found.</status>
+</kw>
+<status status="FAIL" start="2026-05-03T13:56:56.772876" elapsed="0.096128">Button with locator 'id:finish' not found.</status>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Thank you for your order</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2026-05-03T13:56:56.869964" elapsed="0.000083"/>
+</kw>
+<status status="FAIL" start="2026-05-03T13:56:52.500236" elapsed="4.370648">Button with locator 'id:finish' not found.</status>
+</test>
+<status status="FAIL" start="2026-05-03T13:56:52.242062" elapsed="4.636555"/>
+</suite>
+<suite id="s1-s1-s1-s2" name="Test Login" source="C:\Users\kokon\Documents\QAReports\ui_tests\tests\test_login.robot">
+<test id="s1-s1-s1-s2-t1" name="Login Valide SauceDemo" line="6">
+<kw name="Ouvrir Page Login" owner="login_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:56:56.892346" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-03T13:56:56.891953" elapsed="2.867299"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-03T13:56:59.761834" elapsed="0.041549"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:56:56.891309" elapsed="2.912685"/>
+</kw>
+<kw name="Se Connecter Avec Credentials" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:56:59.807259" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>${USERNAME_INPUT}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-03T13:56:59.806827" elapsed="0.175425"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:56:59.984914" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-03T13:56:59.984209" elapsed="0.102581"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:57:00.089801" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-03T13:57:00.089156" elapsed="0.135007"/>
+</kw>
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2026-05-03T13:56:59.806192" elapsed="0.420117"/>
+</kw>
+<kw name="Verifier Login Reussi" owner="login_page">
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:57:00.235181" level="INFO">Current location contains 'inventory.html'.</msg>
+<arg>inventory.html</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-05-03T13:57:00.228075" elapsed="0.007318"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:57:00.258387" level="INFO">Current page contains text 'Products'.</msg>
+<arg>Products</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-05-03T13:57:00.238100" elapsed="0.020575"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:57:00.227475" elapsed="0.033858"/>
+</kw>
+<kw name="Fermer Browser" owner="login_page">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-03T13:57:00.263133" elapsed="2.212268"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:57:00.262473" elapsed="2.213365"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:56:56.890292" elapsed="5.586452"/>
+</test>
+<test id="s1-s1-s1-s2-t2" name="Login Invalide - utilisateur incorrect" line="11">
+<kw name="Ouvrir Page Login" owner="login_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:57:02.484473" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-03T13:57:02.484185" elapsed="2.804557"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-03T13:57:05.291928" elapsed="0.059134"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:57:02.483683" elapsed="2.867803"/>
+</kw>
+<kw name="Se Connecter Avec Credentials" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:57:05.353245" level="INFO">Typing text 'wrong_user' into text field 'id:user-name'.</msg>
+<arg>${USERNAME_INPUT}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-03T13:57:05.352785" elapsed="0.215428"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:57:05.571484" level="INFO">Typing text 'wrong_pass' into text field 'id:password'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-03T13:57:05.571046" elapsed="0.081234"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:57:05.654538" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-03T13:57:05.654078" elapsed="0.091487"/>
+</kw>
+<arg>wrong_user</arg>
+<arg>wrong_pass</arg>
+<status status="PASS" start="2026-05-03T13:57:05.352240" elapsed="0.395371"/>
+</kw>
+<kw name="Verifier Login Echoue" owner="login_page">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:57:05.775209" level="INFO">Element 'css:h3[data-test="error"]' is displayed.</msg>
+<arg>${ERROR_MESSAGE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-03T13:57:05.748779" elapsed="0.026643"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-05-03T13:57:05.800500" level="INFO">Element 'css:h3[data-test="error"]' contains text 'Username and password do not match'.</msg>
+<arg>${ERROR_MESSAGE}</arg>
+<arg>Username and password do not match</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-05-03T13:57:05.777195" elapsed="0.023417"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:57:05.748348" elapsed="0.053865"/>
+</kw>
+<kw name="Fermer Browser" owner="login_page">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-03T13:57:05.803323" elapsed="2.137078"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:57:05.802882" elapsed="2.137913"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:57:02.482434" elapsed="5.459422"/>
+</test>
+<status status="PASS" start="2026-05-03T13:56:56.884350" elapsed="11.060503"/>
+</suite>
+<status status="FAIL" start="2026-05-03T13:56:52.239872" elapsed="15.718225"/>
+</suite>
+<status status="FAIL" start="2026-05-03T13:56:52.238329" elapsed="15.723377"/>
+</suite>
+<suite id="s1-s2" name="Api Tests" source="C:\Users\kokon\Documents\QAReports\api_tests">
+<suite id="s1-s2-s1" name="Tests" source="C:\Users\kokon\Documents\QAReports\api_tests\tests">
+<suite id="s1-s2-s1-s1" name="Test Categories" source="C:\Users\kokon\Documents\QAReports\api_tests\tests\test_categories.robot">
+<test id="s1-s2-s1-s1-t1" name="Get Categories - validation" line="10">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2026-05-03T13:57:09.366694" level="INFO">GET Request : url=https://fakestoreapi.com/products/categories 
+ path_url=/products/categories 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2026-05-03T13:57:09.366984" level="INFO">GET Response : url=https://fakestoreapi.com/products/categories 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 03 May 2026 12:57:09 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"3e-cdq81BKoKIRIQmboBVN84Vj+vkM"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=3TCrZ6T2JZdw8YDV3M2pkLINBGsOosUhsJYlGXsA84NhqhbOZwYiBW%2FUZhXdZjEpCms1aXD7Ix16b2kC1A0%2FeTramjfwavtFIPfWGSAeTmRgv4RsAtvDa%2BS%2BgnwPnpMkR8Wk"}]}', 'Content-Encoding': 'gzip', 'Server': 'cloudflare', 'CF-RAY': '9f5f6e06af76692c-LIS', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=["electronics","jewelery","men's clothing","women's clothing"] 
+ </msg>
+<msg time="2026-05-03T13:57:09.367263" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${BASE_URL}/products/categories</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2026-05-03T13:57:08.157016" elapsed="1.210294"/>
+</kw>
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2026-05-03T13:57:10.335841" level="INFO">GET Request : url=https://fakestoreapi.com/products/categories 
+ path_url=/products/categories 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2026-05-03T13:57:10.335950" level="INFO">GET Response : url=https://fakestoreapi.com/products/categories 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 03 May 2026 12:57:10 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"3e-cdq81BKoKIRIQmboBVN84Vj+vkM"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=y%2BweeGDJL43ZTs6B27XBgZKjlhasdw29A80D2WzSV%2FCXdm9v7y2qXk3iDo%2FBP7yYN02PhKwitlsXf6MYa3yMk3ozYhLac6KR4NrMN75gDWCnUXpAX87%2ByDvOtmDBFjC2qgRW"}]}', 'Content-Encoding': 'gzip', 'Server': 'cloudflare', 'CF-RAY': '9f5f6e0d28bdf767-MAD', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=["electronics","jewelery","men's clothing","women's clothing"] 
+ </msg>
+<msg time="2026-05-03T13:57:10.337244" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${BASE_URL}/products/categories</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2026-05-03T13:57:09.370022" elapsed="0.967265"/>
+</kw>
+<kw name="Valider Status Code" owner="api_keywords">
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-05-03T13:57:10.341116" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>${expected}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-05-03T13:57:10.340654" elapsed="0.000529"/>
+</kw>
+<arg>${response}</arg>
+<arg>200</arg>
+<status status="PASS" start="2026-05-03T13:57:10.340003" elapsed="0.001975"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-03T13:57:10.343022" level="INFO">${json} = ['electronics', 'jewelery', "men's clothing", "women's clothing"]</msg>
+<var>${json}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-03T13:57:10.342464" elapsed="0.000590"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-05-03T13:57:10.344345" level="INFO">Length is 4.</msg>
+<arg>${json}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-05-03T13:57:10.344164" elapsed="0.000231"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-05-03T13:57:10.345747" level="INFO">Length is 4.</msg>
+<msg time="2026-05-03T13:57:10.345863" level="INFO">${length} = 4</msg>
+<var>${length}</var>
+<arg>${json}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-05-03T13:57:10.345523" elapsed="0.000379"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${length} &gt; 0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-05-03T13:57:10.347072" elapsed="0.000316"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:57:08.156199" elapsed="2.191679"/>
+</test>
+<status status="PASS" start="2026-05-03T13:57:07.978075" elapsed="2.372308"/>
+</suite>
+<suite id="s1-s2-s1-s2" name="Test Keywords" source="C:\Users\kokon\Documents\QAReports\api_tests\tests\test_keywords.robot">
+<test id="s1-s2-s1-s2-t1" name="Test Valider Reponse Produits" line="11">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2026-05-03T13:57:11.046914" level="INFO">GET Request : url=https://fakestoreapi.com/products 
+ path_url=/products 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2026-05-03T13:57:11.047131" level="INFO">GET Response : url=https://fakestoreapi.com/products 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 03 May 2026 12:57:10 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"2990-lZ2o94A2EDKiYW3/6/3oI74HHkw"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=43W7vCho1jxV7CX3aJUG26sQR60RnKF4IN3bbPHZstEILNFwiM3K5anP7LvbEVKjdU0rWqvHQarsezkydy63AbPwUtcXNPAUASlP3uWCKWW5A2nv8pgo7EqwrtshwA%2Fzuuma"}]}', 'Content-Encoding': 'gzip', 'Server': 'cloudflare', 'CF-RAY': '9f5f6e1359a0e32c-LIS', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":1,"title":"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops","price":109.95,"description":"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday","category":"men's clothing","image":"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png","rating":{"rate":3.9,"count":120}},{"id":2,"title":"Mens Casual Premium Slim Fit T-Shirts ","price":22.3,"description":"Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight &amp; soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.","category":"men's clothing","image":"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png","rating":{"rate":4.1,"count":259}},{"id":3,"title":"Mens Cotton Jacket","price":55.99,"description":"great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.","category":"men's clothing","image":"https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png","rating":{"rate":4.7,"count":500}},{"id":4,"title":"Mens Casual Slim Fit","price":15.99,"description":"The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.","category":"men's clothing","image":"https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png","rating":{"rate":2.1,"count":430}},{"id":5,"title":"John Hardy Women's Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet","price":695,"description":"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.","category":"jewelery","image":"https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_t.png","rating":{"rate":4.6,"count":400}},{"id":6,"title":"Solid Gold Petite Micropave ","price":168,"description":"Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.","category":"jewelery","image":"https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_t.png","rating":{"rate":3.9,"count":70}},{"id":7,"title":"White Gold Plated Princess","price":9.99,"description":"Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...","category":"jewelery","image":"https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png","rating":{"rate":3,"count":400}},{"id":8,"title":"Pierced Owl Rose Gold Plated Stainless Steel Double","price":10.99,"description":"Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel","category":"jewelery","image":"https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_t.png","rating":{"rate":1.9,"count":100}},{"id":9,"title":"WD 2TB Elements Portable External Hard Drive - USB 3.0 ","price":64,"description":"USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system","category":"electronics","image":"https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_t.png","rating":{"rate":3.3,"count":203}},{"id":10,"title":"SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s","price":109,"description":"Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)","category":"electronics","image":"https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_t.png","rating":{"rate":2.9,"count":470}},{"id":11,"title":"Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5","price":109,"description":"3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking &amp; Correction) to provide the optimized performance and enhanced reliability.","category":"electronics","image":"https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_t.png","rating":{"rate":4.8,"count":319}},{"id":12,"title":"WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive","price":114,"description":"Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty","category":"electronics","image":"https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_t.png","rating":{"rate":4.8,"count":400}},{"id":13,"title":"Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin","price":599,"description":"21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz","category":"electronics","image":"https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_t.png","rating":{"rate":2.9,"count":250}},{"id":14,"title":"Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ","price":999.99,"description":"49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag","category":"electronics","image":"https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_t.png","rating":{"rate":2.2,"count":140}},{"id":15,"title":"BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats","price":56.99,"description":"Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates","category":"women's clothing","image":"https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_t.png","rating":{"rate":2.6,"count":235}},{"id":16,"title":"Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket","price":29.95,"description":"100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON","category":"women's clothing","image":"https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_t.png","rating":{"rate":2.9,"count":340}},{"id":17,"title":"Rain Jacket Women Windbreaker Striped Climbing Raincoats","price":39.99,"description":"Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.","category":"women's clothing","image":"https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2t.png","rating":{"rate":3.8,"count":679}},{"id":18,"title":"MBJ Women's Solid Short Sleeve Boat Neck V ","price":9.85,"description":"95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem","category":"women's clothing","image":"https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_t.png","rating":{"rate":4.7,"count":130}},{"id":19,"title":"Opna Women's Short Sleeve Moisture","price":7.95,"description":"100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash &amp; Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, ... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg time="2026-05-03T13:57:11.047453" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${BASE_URL}/products</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2026-05-03T13:57:10.356502" elapsed="0.690997"/>
+</kw>
+<kw name="Valider Reponse Produits" owner="api_keywords">
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-05-03T13:57:11.051098" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.050642" elapsed="0.000540"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-03T13:57:11.054184" level="INFO">${json} = [{'id': 1, 'title': 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops', 'price': 109.95, 'description': 'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 in...</msg>
+<var>${json}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.052196" elapsed="0.002051"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-05-03T13:57:11.055365" level="INFO">Length is 20.</msg>
+<arg>${json}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.055160" elapsed="0.000273"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-05-03T13:57:11.056461" level="INFO">Length is 20.</msg>
+<msg time="2026-05-03T13:57:11.056582" level="INFO">${length} = 20</msg>
+<var>${length}</var>
+<arg>${json}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.056275" elapsed="0.000347"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${length} &gt; 0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.057683" elapsed="0.000342"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-03T13:57:11.058569" level="INFO">${first} = {'id': 1, 'title': 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops', 'price': 109.95, 'description': 'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inc...</msg>
+<var>${first}</var>
+<arg>${json}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.058305" elapsed="0.000314"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<msg time="2026-05-03T13:57:11.059865" level="INFO">False</msg>
+<arg>${first}</arg>
+<arg>title</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.059612" elapsed="0.000326"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<msg time="2026-05-03T13:57:11.061053" level="INFO">False</msg>
+<arg>${first}</arg>
+<arg>price</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.060809" elapsed="0.000312"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<msg time="2026-05-03T13:57:11.062215" level="INFO">False</msg>
+<arg>${first}</arg>
+<arg>id</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.061968" elapsed="0.000313"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-05-03T13:57:11.063689" level="INFO">${price} = 109.95</msg>
+<var>${price}</var>
+<arg>${first}</arg>
+<arg>price</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.063351" elapsed="0.000390"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>isinstance(${price}, float) or isinstance(${price}, int)</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.064720" elapsed="0.000404"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-05-03T13:57:11.065721" level="INFO">${title} = Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</msg>
+<var>${title}</var>
+<arg>${first}</arg>
+<arg>title</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.065429" elapsed="0.000339"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-05-03T13:57:11.067187" level="INFO">Length is 53.</msg>
+<arg>${title}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.066958" elapsed="0.000301"/>
+</kw>
+<arg>${response}</arg>
+<status status="PASS" start="2026-05-03T13:57:11.050211" elapsed="0.017866"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:57:10.355945" elapsed="0.712574"/>
+</test>
+<status status="PASS" start="2026-05-03T13:57:10.353129" elapsed="0.717768"/>
+</suite>
+<suite id="s1-s2-s1-s3" name="Test Products" source="C:\Users\kokon\Documents\QAReports\api_tests\tests\test_products.robot">
+<test id="s1-s2-s1-s3-t1" name="GET tous les produit - validations complete" line="11">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2026-05-03T13:57:11.735763" level="INFO">GET Request : url=https://fakestoreapi.com/products 
+ path_url=/products 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2026-05-03T13:57:11.736023" level="INFO">GET Response : url=https://fakestoreapi.com/products 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 03 May 2026 12:57:11 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"2990-lZ2o94A2EDKiYW3/6/3oI74HHkw"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=WcatxYqvwmOm6VsG0yWpZA4m%2FFAcJkYjQ10xrG78jAPgjNtFmShfvfuThR9CtWK7Rfrd7%2BXkbdmzzDyQv3KeTBwdQxYbrOWVF%2BlI%2FP4j3XMjzmSN25b53casW5Ik02SuLZhE"}]}', 'Content-Encoding': 'gzip', 'Server': 'cloudflare', 'CF-RAY': '9f5f6e17e81e4813-LIS', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":1,"title":"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops","price":109.95,"description":"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday","category":"men's clothing","image":"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png","rating":{"rate":3.9,"count":120}},{"id":2,"title":"Mens Casual Premium Slim Fit T-Shirts ","price":22.3,"description":"Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight &amp; soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.","category":"men's clothing","image":"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png","rating":{"rate":4.1,"count":259}},{"id":3,"title":"Mens Cotton Jacket","price":55.99,"description":"great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.","category":"men's clothing","image":"https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png","rating":{"rate":4.7,"count":500}},{"id":4,"title":"Mens Casual Slim Fit","price":15.99,"description":"The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.","category":"men's clothing","image":"https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png","rating":{"rate":2.1,"count":430}},{"id":5,"title":"John Hardy Women's Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet","price":695,"description":"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.","category":"jewelery","image":"https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_t.png","rating":{"rate":4.6,"count":400}},{"id":6,"title":"Solid Gold Petite Micropave ","price":168,"description":"Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.","category":"jewelery","image":"https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_t.png","rating":{"rate":3.9,"count":70}},{"id":7,"title":"White Gold Plated Princess","price":9.99,"description":"Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...","category":"jewelery","image":"https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png","rating":{"rate":3,"count":400}},{"id":8,"title":"Pierced Owl Rose Gold Plated Stainless Steel Double","price":10.99,"description":"Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel","category":"jewelery","image":"https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_t.png","rating":{"rate":1.9,"count":100}},{"id":9,"title":"WD 2TB Elements Portable External Hard Drive - USB 3.0 ","price":64,"description":"USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system","category":"electronics","image":"https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_t.png","rating":{"rate":3.3,"count":203}},{"id":10,"title":"SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s","price":109,"description":"Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)","category":"electronics","image":"https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_t.png","rating":{"rate":2.9,"count":470}},{"id":11,"title":"Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5","price":109,"description":"3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking &amp; Correction) to provide the optimized performance and enhanced reliability.","category":"electronics","image":"https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_t.png","rating":{"rate":4.8,"count":319}},{"id":12,"title":"WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive","price":114,"description":"Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty","category":"electronics","image":"https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_t.png","rating":{"rate":4.8,"count":400}},{"id":13,"title":"Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin","price":599,"description":"21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz","category":"electronics","image":"https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_t.png","rating":{"rate":2.9,"count":250}},{"id":14,"title":"Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ","price":999.99,"description":"49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag","category":"electronics","image":"https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_t.png","rating":{"rate":2.2,"count":140}},{"id":15,"title":"BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats","price":56.99,"description":"Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates","category":"women's clothing","image":"https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_t.png","rating":{"rate":2.6,"count":235}},{"id":16,"title":"Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket","price":29.95,"description":"100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON","category":"women's clothing","image":"https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_t.png","rating":{"rate":2.9,"count":340}},{"id":17,"title":"Rain Jacket Women Windbreaker Striped Climbing Raincoats","price":39.99,"description":"Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.","category":"women's clothing","image":"https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2t.png","rating":{"rate":3.8,"count":679}},{"id":18,"title":"MBJ Women's Solid Short Sleeve Boat Neck V ","price":9.85,"description":"95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem","category":"women's clothing","image":"https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_t.png","rating":{"rate":4.7,"count":130}},{"id":19,"title":"Opna Women's Short Sleeve Moisture","price":7.95,"description":"100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash &amp; Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, ... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg time="2026-05-03T13:57:11.736459" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${BASE_URL}/products</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.077419" elapsed="0.659071"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-05-03T13:57:11.740394" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.739437" elapsed="0.001121"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-03T13:57:11.744246" level="INFO">${json} = [{'id': 1, 'title': 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops', 'price': 109.95, 'description': 'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 in...</msg>
+<var>${json}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.743181" elapsed="0.001120"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-05-03T13:57:11.747900" level="INFO">Length is 20.</msg>
+<arg>${json}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.747507" elapsed="0.000480"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-05-03T13:57:11.750561" level="INFO">Length is 20.</msg>
+<msg time="2026-05-03T13:57:11.750691" level="INFO">${length} = 20</msg>
+<var>${length}</var>
+<arg>${json}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.750260" elapsed="0.000466"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${length}&gt;0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.752079" elapsed="0.000382"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-03T13:57:11.753189" level="INFO">${first} = {'id': 1, 'title': 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops', 'price': 109.95, 'description': 'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inc...</msg>
+<var>${first}</var>
+<arg>${json}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.752961" elapsed="0.000259"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<msg time="2026-05-03T13:57:11.755132" level="INFO">False</msg>
+<arg>${first}</arg>
+<arg>title</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.754771" elapsed="0.000430"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<msg time="2026-05-03T13:57:11.757208" level="INFO">False</msg>
+<arg>${first}</arg>
+<arg>price</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.756678" elapsed="0.000632"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<msg time="2026-05-03T13:57:11.759217" level="INFO">False</msg>
+<arg>${first}</arg>
+<arg>id</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.758914" elapsed="0.000366"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-05-03T13:57:11.761617" level="INFO">${price} = 109.95</msg>
+<var>${price}</var>
+<arg>${first}</arg>
+<arg>price</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.761246" elapsed="0.000413"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>isinstance(${price},float) or isinstance(${price},int)</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.764360" elapsed="0.000504"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-05-03T13:57:11.765740" level="INFO">${title} = Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</msg>
+<var>${title}</var>
+<arg>${first}</arg>
+<arg>title</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.765424" elapsed="0.000364"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-05-03T13:57:11.767702" level="INFO">Length is 53.</msg>
+<arg>${title}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-05-03T13:57:11.767387" elapsed="0.000385"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:57:11.076883" elapsed="0.692142"/>
+</test>
+<status status="PASS" start="2026-05-03T13:57:11.074157" elapsed="0.698575"/>
+</suite>
+<status status="PASS" start="2026-05-03T13:57:07.975617" elapsed="3.799925"/>
+</suite>
+<status status="PASS" start="2026-05-03T13:57:07.968234" elapsed="3.808679"/>
+</suite>
+<status status="FAIL" start="2026-05-03T13:56:52.221847" elapsed="19.556250"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="1" skip="0" id="s1" name="Ui Tests &amp; Api Tests">Ui Tests &amp; Api Tests</stat>
+<stat pass="2" fail="1" skip="0" id="s1-s1" name="Ui Tests">Ui Tests &amp; Api Tests.Ui Tests</stat>
+<stat pass="2" fail="1" skip="0" id="s1-s1-s1" name="Tests">Ui Tests &amp; Api Tests.Ui Tests.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Test E2E Purchase">Ui Tests &amp; Api Tests.Ui Tests.Tests.Test E2E Purchase</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s2" name="Test Login">Ui Tests &amp; Api Tests.Ui Tests.Tests.Test Login</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s2" name="Api Tests">Ui Tests &amp; Api Tests.Api Tests</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s2-s1" name="Tests">Ui Tests &amp; Api Tests.Api Tests.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2-s1-s1" name="Test Categories">Ui Tests &amp; Api Tests.Api Tests.Tests.Test Categories</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2-s1-s2" name="Test Keywords">Ui Tests &amp; Api Tests.Api Tests.Tests.Test Keywords</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2-s1-s3" name="Test Products">Ui Tests &amp; Api Tests.Api Tests.Tests.Test Products</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
