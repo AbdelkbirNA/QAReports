@@ -1,105 +1,329 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.13.5 on win32)" generated="2026-05-03T09:51:18.707284" rpa="false" schemaversion="5">
-<suite id="s1" name="QAReports" source="C:\Users\kokon\Documents\QAReports">
-<suite id="s1-s1" name="Api Tests" source="C:\Users\kokon\Documents\QAReports\api_tests">
-<suite id="s1-s1-s1" name="Tests" source="C:\Users\kokon\Documents\QAReports\api_tests\tests">
-<suite id="s1-s1-s1-s1" name="Test Categories" source="C:\Users\kokon\Documents\QAReports\api_tests\tests\test_categories.robot">
-<test id="s1-s1-s1-s1-t1" name="Get Categories - validation" line="10">
+<robot generator="Robot 7.0 (Python 3.13.5 on win32)" generated="2026-05-03T09:56:10.935895" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\kokon\Documents\QAReports\api_tests\tests">
+<suite id="s1-s1" name="Test Categories" source="C:\Users\kokon\Documents\QAReports\api_tests\tests\test_categories.robot">
+<test id="s1-s1-t1" name="Get Categories - validation" line="10">
 <kw name="GET" owner="RequestsLibrary">
-<msg time="2026-05-03T09:51:20.191716" level="INFO">GET Request : url=https://fakestoreapi.com/products/categories 
+<msg time="2026-05-03T09:56:11.960892" level="INFO">GET Request : url=https://fakestoreapi.com/products/categories 
  path_url=/products/categories 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2026-05-03T09:51:20.192078" level="INFO">GET Response : url=https://fakestoreapi.com/products/categories 
+<msg time="2026-05-03T09:56:11.961115" level="INFO">GET Response : url=https://fakestoreapi.com/products/categories 
  status=200, reason=OK 
- headers={'Date': 'Sun, 03 May 2026 08:51:20 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"3e-cdq81BKoKIRIQmboBVN84Vj+vkM"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Ij6vX3eBpPNZfAO0dr4j7VFePPqqJYPTnvDZTmrB0Qni0hoGu%2Bv4UmDEvSE4kvR7McM%2FV%2Ftx7E793vOnxQx4A3QwWat9RSn5xVo3KL%2B4g8v6%2FKLtHSkclsMAep11cnYz%2F2I5"}]}', 'Content-Encoding': 'gzip', 'Server': 'cloudflare', 'CF-RAY': '9f5e05f19b13a062-FRA', 'alt-svc': 'h3=":443"; ma=86400'} 
+ headers={'Date': 'Sun, 03 May 2026 08:56:11 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"3e-cdq81BKoKIRIQmboBVN84Vj+vkM"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=YNS6%2BnaNmhxzNiggzYFXeZWT3GGLAwmVEk9JYLrFwmS6TK92nBPvIr1kHEJwKwWd8fZXgTluHqljbOKFEbVyUonEgQS%2BXI0PnCFtopHNgcLIT1RCrn8hCGrXPZ%2FZGrNz039c"}]}', 'Content-Encoding': 'gzip', 'Server': 'cloudflare', 'CF-RAY': '9f5e0d11e8974813-LIS', 'alt-svc': 'h3=":443"; ma=86400'} 
  body=["electronics","jewelery","men's clothing","women's clothing"] 
  </msg>
-<msg time="2026-05-03T09:51:20.192560" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2026-05-03T09:56:11.961327" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>${BASE_URL}/products/categories</arg>
 <doc>Sends a GET request.</doc>
-<status status="PASS" start="2026-05-03T09:51:18.984434" elapsed="1.208260"/>
+<status status="PASS" start="2026-05-03T09:56:11.223025" elapsed="0.738351"/>
 </kw>
 <kw name="GET" owner="RequestsLibrary">
-<msg time="2026-05-03T09:51:20.849760" level="INFO">GET Request : url=https://fakestoreapi.com/products/categories 
+<msg time="2026-05-03T09:56:12.644108" level="INFO">GET Request : url=https://fakestoreapi.com/products/categories 
  path_url=/products/categories 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2026-05-03T09:51:20.850088" level="INFO">GET Response : url=https://fakestoreapi.com/products/categories 
+<msg time="2026-05-03T09:56:12.644242" level="INFO">GET Response : url=https://fakestoreapi.com/products/categories 
  status=200, reason=OK 
- headers={'Date': 'Sun, 03 May 2026 08:51:20 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"3e-cdq81BKoKIRIQmboBVN84Vj+vkM"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=9zWed9%2BSMQesyis5Sz9FqzXcu7r4%2B%2B3MNyJ80tTVg6h07eKpFgvAc4CdCF9XFltBhoF%2Bl1fmipzWHwOWNVcE9gam1edhxJAWgP7658Qbgj%2FNDJ%2Fw6TyMP8atrwf%2BAIXhfjED"}]}', 'Content-Encoding': 'gzip', 'Server': 'cloudflare', 'CF-RAY': '9f5e05f6ea8ce537-FRA', 'alt-svc': 'h3=":443"; ma=86400'} 
+ headers={'Date': 'Sun, 03 May 2026 08:56:12 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"3e-cdq81BKoKIRIQmboBVN84Vj+vkM"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=TxjFLpAHLki5SImDF6F5cplMcGGkKH24WttuaZSCyvqxTcU3oZkZwn%2FWmtDvnfwl1azOjt0sWBfPtbKmTlYhDT885n04iFUE1icLMDOQSbikQKuADgCodL0dljzuZAFnFBeZ"}]}', 'Content-Encoding': 'gzip', 'Server': 'cloudflare', 'CF-RAY': '9f5e0d166cc594ad-LIS', 'alt-svc': 'h3=":443"; ma=86400'} 
  body=["electronics","jewelery","men's clothing","women's clothing"] 
  </msg>
-<msg time="2026-05-03T09:51:20.851874" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2026-05-03T09:56:12.645595" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>${BASE_URL}/products/categories</arg>
 <doc>Sends a GET request.</doc>
-<status status="PASS" start="2026-05-03T09:51:20.193766" elapsed="0.658374"/>
+<status status="PASS" start="2026-05-03T09:56:11.963390" elapsed="0.682263"/>
 </kw>
 <kw name="Valider Status Code" owner="api_keywords">
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2026-05-03T09:51:20.853735" level="INFO">Argument types are:
+<msg time="2026-05-03T09:56:12.647440" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>${expected}</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2026-05-03T09:51:20.853317" elapsed="0.000642"/>
+<status status="PASS" start="2026-05-03T09:56:12.646803" elapsed="0.000705"/>
 </kw>
 <arg>${response}</arg>
 <arg>200</arg>
-<status status="PASS" start="2026-05-03T09:51:20.852803" elapsed="0.001310"/>
+<status status="PASS" start="2026-05-03T09:56:12.646230" elapsed="0.001351"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-03T09:51:20.854961" level="INFO">${json} = ['electronics', 'jewelery', "men's clothing", "women's clothing"]</msg>
+<msg time="2026-05-03T09:56:12.648375" level="INFO">${json} = ['electronics', 'jewelery', "men's clothing", "women's clothing"]</msg>
 <var>${json}</var>
 <arg>${response.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-03T09:51:20.854553" elapsed="0.000537"/>
+<status status="PASS" start="2026-05-03T09:56:12.647899" elapsed="0.000500"/>
 </kw>
 <kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2026-05-03T09:51:20.855698" level="INFO">Length is 4.</msg>
+<msg time="2026-05-03T09:56:12.648870" level="INFO">Length is 4.</msg>
 <arg>${json}</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2026-05-03T09:51:20.855454" elapsed="0.000462"/>
+<status status="PASS" start="2026-05-03T09:56:12.648724" elapsed="0.000199"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2026-05-03T09:51:20.856614" level="INFO">Length is 4.</msg>
-<msg time="2026-05-03T09:51:20.856921" level="INFO">${length} = 4</msg>
+<msg time="2026-05-03T09:56:12.649379" level="INFO">Length is 4.</msg>
+<msg time="2026-05-03T09:56:12.649451" level="INFO">${length} = 4</msg>
 <var>${length}</var>
 <arg>${json}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2026-05-03T09:51:20.856347" elapsed="0.000700"/>
+<status status="PASS" start="2026-05-03T09:56:12.649226" elapsed="0.000242"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${length} &gt; 0</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-05-03T09:51:20.857480" elapsed="0.000352"/>
+<status status="PASS" start="2026-05-03T09:56:12.649763" elapsed="0.000219"/>
 </kw>
-<status status="PASS" start="2026-05-03T09:51:18.980599" elapsed="1.877581"/>
+<status status="PASS" start="2026-05-03T09:56:11.221374" elapsed="1.428896"/>
 </test>
-<status status="PASS" start="2026-05-03T09:51:18.795868" elapsed="2.066598"/>
+<status status="PASS" start="2026-05-03T09:56:10.967545" elapsed="1.683356"/>
 </suite>
-<status status="PASS" start="2026-05-03T09:51:18.789183" elapsed="2.076765"/>
+<suite id="s1-s2" name="Test Keywords" source="C:\Users\kokon\Documents\QAReports\api_tests\tests\test_keywords.robot">
+<test id="s1-s2-t1" name="Test Valider Reponse Produits" line="11">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2026-05-03T09:56:13.307636" level="INFO">GET Request : url=https://fakestoreapi.com/products 
+ path_url=/products 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2026-05-03T09:56:13.307774" level="INFO">GET Response : url=https://fakestoreapi.com/products 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 03 May 2026 08:56:13 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"2990-lZ2o94A2EDKiYW3/6/3oI74HHkw"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=1zFmz9UVUf44ap2RIfK715RTTXdRzfBr%2BA31ujCDrd0cYbu1YqHWpR2En4C%2BJP7Vz2KxHIwLuWLh6FZezNkd850zRuLWDYtyuBdM%2Bp1KRegzGj3RXmWfH%2FhsUJbC7wB7BO8v"}]}', 'Content-Encoding': 'gzip', 'Server': 'cloudflare', 'CF-RAY': '9f5e0d1a6fffe32c-LIS', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":1,"title":"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops","price":109.95,"description":"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday","category":"men's clothing","image":"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png","rating":{"rate":3.9,"count":120}},{"id":2,"title":"Mens Casual Premium Slim Fit T-Shirts ","price":22.3,"description":"Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight &amp; soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.","category":"men's clothing","image":"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png","rating":{"rate":4.1,"count":259}},{"id":3,"title":"Mens Cotton Jacket","price":55.99,"description":"great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.","category":"men's clothing","image":"https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png","rating":{"rate":4.7,"count":500}},{"id":4,"title":"Mens Casual Slim Fit","price":15.99,"description":"The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.","category":"men's clothing","image":"https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png","rating":{"rate":2.1,"count":430}},{"id":5,"title":"John Hardy Women's Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet","price":695,"description":"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.","category":"jewelery","image":"https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_t.png","rating":{"rate":4.6,"count":400}},{"id":6,"title":"Solid Gold Petite Micropave ","price":168,"description":"Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.","category":"jewelery","image":"https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_t.png","rating":{"rate":3.9,"count":70}},{"id":7,"title":"White Gold Plated Princess","price":9.99,"description":"Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...","category":"jewelery","image":"https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png","rating":{"rate":3,"count":400}},{"id":8,"title":"Pierced Owl Rose Gold Plated Stainless Steel Double","price":10.99,"description":"Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel","category":"jewelery","image":"https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_t.png","rating":{"rate":1.9,"count":100}},{"id":9,"title":"WD 2TB Elements Portable External Hard Drive - USB 3.0 ","price":64,"description":"USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system","category":"electronics","image":"https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_t.png","rating":{"rate":3.3,"count":203}},{"id":10,"title":"SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s","price":109,"description":"Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)","category":"electronics","image":"https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_t.png","rating":{"rate":2.9,"count":470}},{"id":11,"title":"Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5","price":109,"description":"3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking &amp; Correction) to provide the optimized performance and enhanced reliability.","category":"electronics","image":"https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_t.png","rating":{"rate":4.8,"count":319}},{"id":12,"title":"WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive","price":114,"description":"Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty","category":"electronics","image":"https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_t.png","rating":{"rate":4.8,"count":400}},{"id":13,"title":"Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin","price":599,"description":"21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz","category":"electronics","image":"https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_t.png","rating":{"rate":2.9,"count":250}},{"id":14,"title":"Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ","price":999.99,"description":"49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag","category":"electronics","image":"https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_t.png","rating":{"rate":2.2,"count":140}},{"id":15,"title":"BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats","price":56.99,"description":"Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates","category":"women's clothing","image":"https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_t.png","rating":{"rate":2.6,"count":235}},{"id":16,"title":"Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket","price":29.95,"description":"100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON","category":"women's clothing","image":"https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_t.png","rating":{"rate":2.9,"count":340}},{"id":17,"title":"Rain Jacket Women Windbreaker Striped Climbing Raincoats","price":39.99,"description":"Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.","category":"women's clothing","image":"https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2t.png","rating":{"rate":3.8,"count":679}},{"id":18,"title":"MBJ Women's Solid Short Sleeve Boat Neck V ","price":9.85,"description":"95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem","category":"women's clothing","image":"https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_t.png","rating":{"rate":4.7,"count":130}},{"id":19,"title":"Opna Women's Short Sleeve Moisture","price":7.95,"description":"100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash &amp; Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, ... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg time="2026-05-03T09:56:13.308195" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${BASE_URL}/products</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2026-05-03T09:56:12.655008" elapsed="0.653213"/>
+</kw>
+<kw name="Valider Reponse Produits" owner="api_keywords">
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-05-03T09:56:13.309340" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-05-03T09:56:13.308973" elapsed="0.000436"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-03T09:56:13.311603" level="INFO">${json} = [{'id': 1, 'title': 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops', 'price': 109.95, 'description': 'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 in...</msg>
+<var>${json}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-03T09:56:13.309513" elapsed="0.002128"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-05-03T09:56:13.311940" level="INFO">Length is 20.</msg>
+<arg>${json}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-05-03T09:56:13.311799" elapsed="0.000179"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-05-03T09:56:13.312151" level="INFO">Length is 20.</msg>
+<msg time="2026-05-03T09:56:13.312206" level="INFO">${length} = 20</msg>
+<var>${length}</var>
+<arg>${json}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-05-03T09:56:13.312067" elapsed="0.000158"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${length} &gt; 0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-05-03T09:56:13.312302" elapsed="0.000173"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-03T09:56:13.312722" level="INFO">${first} = {'id': 1, 'title': 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops', 'price': 109.95, 'description': 'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inc...</msg>
+<var>${first}</var>
+<arg>${json}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-03T09:56:13.312563" elapsed="0.000189"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<msg time="2026-05-03T09:56:13.313030" level="INFO">False</msg>
+<arg>${first}</arg>
+<arg>title</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-05-03T09:56:13.312863" elapsed="0.000208"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<msg time="2026-05-03T09:56:13.313256" level="INFO">False</msg>
+<arg>${first}</arg>
+<arg>price</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-05-03T09:56:13.313155" elapsed="0.000130"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<msg time="2026-05-03T09:56:13.313461" level="INFO">False</msg>
+<arg>${first}</arg>
+<arg>id</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-05-03T09:56:13.313355" elapsed="0.000133"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-05-03T09:56:13.313723" level="INFO">${price} = 109.95</msg>
+<var>${price}</var>
+<arg>${first}</arg>
+<arg>price</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-05-03T09:56:13.313591" elapsed="0.000150"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>isinstance(${price}, float) or isinstance(${price}, int)</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-05-03T09:56:13.313842" elapsed="0.000205"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-05-03T09:56:13.314265" level="INFO">${title} = Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</msg>
+<var>${title}</var>
+<arg>${first}</arg>
+<arg>title</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-05-03T09:56:13.314137" elapsed="0.000146"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-05-03T09:56:13.314441" level="INFO">Length is 53.</msg>
+<arg>${title}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-05-03T09:56:13.314358" elapsed="0.000113"/>
+</kw>
+<arg>${response}</arg>
+<status status="PASS" start="2026-05-03T09:56:13.308667" elapsed="0.005867"/>
+</kw>
+<status status="PASS" start="2026-05-03T09:56:12.654479" elapsed="0.660420"/>
+</test>
+<status status="PASS" start="2026-05-03T09:56:12.651716" elapsed="0.664092"/>
 </suite>
-<status status="PASS" start="2026-05-03T09:51:18.784895" elapsed="2.084128"/>
+<suite id="s1-s3" name="Test Products" source="C:\Users\kokon\Documents\QAReports\api_tests\tests\test_products.robot">
+<test id="s1-s3-t1" name="GET tous les produit - validations complete" line="11">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2026-05-03T09:56:14.044327" level="INFO">GET Request : url=https://fakestoreapi.com/products 
+ path_url=/products 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2026-05-03T09:56:14.044592" level="INFO">GET Response : url=https://fakestoreapi.com/products 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 03 May 2026 08:56:14 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"2990-lZ2o94A2EDKiYW3/6/3oI74HHkw"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=biFjHEcSEAi4ZjADdPjdBaUyaiRA%2B2wsofOLukvMGB16uoWKjwh56b%2Bz%2F8U%2BpAfBgbGJctmjj7eOCeArq1fwD32pJo%2Bpn76vv9Kr6M2qb%2F189DsZGzqgmckZNJZG8FUxDNI%2F"}]}', 'Content-Encoding': 'gzip', 'Server': 'cloudflare', 'CF-RAY': '9f5e0d1f384b31f1-LIS', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":1,"title":"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops","price":109.95,"description":"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday","category":"men's clothing","image":"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png","rating":{"rate":3.9,"count":120}},{"id":2,"title":"Mens Casual Premium Slim Fit T-Shirts ","price":22.3,"description":"Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight &amp; soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.","category":"men's clothing","image":"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png","rating":{"rate":4.1,"count":259}},{"id":3,"title":"Mens Cotton Jacket","price":55.99,"description":"great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.","category":"men's clothing","image":"https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png","rating":{"rate":4.7,"count":500}},{"id":4,"title":"Mens Casual Slim Fit","price":15.99,"description":"The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.","category":"men's clothing","image":"https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png","rating":{"rate":2.1,"count":430}},{"id":5,"title":"John Hardy Women's Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet","price":695,"description":"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.","category":"jewelery","image":"https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_t.png","rating":{"rate":4.6,"count":400}},{"id":6,"title":"Solid Gold Petite Micropave ","price":168,"description":"Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.","category":"jewelery","image":"https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_t.png","rating":{"rate":3.9,"count":70}},{"id":7,"title":"White Gold Plated Princess","price":9.99,"description":"Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...","category":"jewelery","image":"https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png","rating":{"rate":3,"count":400}},{"id":8,"title":"Pierced Owl Rose Gold Plated Stainless Steel Double","price":10.99,"description":"Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel","category":"jewelery","image":"https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_t.png","rating":{"rate":1.9,"count":100}},{"id":9,"title":"WD 2TB Elements Portable External Hard Drive - USB 3.0 ","price":64,"description":"USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system","category":"electronics","image":"https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_t.png","rating":{"rate":3.3,"count":203}},{"id":10,"title":"SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s","price":109,"description":"Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)","category":"electronics","image":"https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_t.png","rating":{"rate":2.9,"count":470}},{"id":11,"title":"Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5","price":109,"description":"3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking &amp; Correction) to provide the optimized performance and enhanced reliability.","category":"electronics","image":"https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_t.png","rating":{"rate":4.8,"count":319}},{"id":12,"title":"WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive","price":114,"description":"Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty","category":"electronics","image":"https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_t.png","rating":{"rate":4.8,"count":400}},{"id":13,"title":"Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin","price":599,"description":"21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz","category":"electronics","image":"https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_t.png","rating":{"rate":2.9,"count":250}},{"id":14,"title":"Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ","price":999.99,"description":"49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag","category":"electronics","image":"https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_t.png","rating":{"rate":2.2,"count":140}},{"id":15,"title":"BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats","price":56.99,"description":"Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates","category":"women's clothing","image":"https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_t.png","rating":{"rate":2.6,"count":235}},{"id":16,"title":"Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket","price":29.95,"description":"100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON","category":"women's clothing","image":"https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_t.png","rating":{"rate":2.9,"count":340}},{"id":17,"title":"Rain Jacket Women Windbreaker Striped Climbing Raincoats","price":39.99,"description":"Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.","category":"women's clothing","image":"https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2t.png","rating":{"rate":3.8,"count":679}},{"id":18,"title":"MBJ Women's Solid Short Sleeve Boat Neck V ","price":9.85,"description":"95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem","category":"women's clothing","image":"https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_t.png","rating":{"rate":4.7,"count":130}},{"id":19,"title":"Opna Women's Short Sleeve Moisture","price":7.95,"description":"100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash &amp; Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, ... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg time="2026-05-03T09:56:14.045096" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${BASE_URL}/products</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2026-05-03T09:56:13.319271" elapsed="0.725862"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-05-03T09:56:14.046228" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-05-03T09:56:14.045614" elapsed="0.000691"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-03T09:56:14.047481" level="INFO">${json} = [{'id': 1, 'title': 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops', 'price': 109.95, 'description': 'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 in...</msg>
+<var>${json}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-03T09:56:14.046660" elapsed="0.000852"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-05-03T09:56:14.048026" level="INFO">Length is 20.</msg>
+<arg>${json}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-05-03T09:56:14.047824" elapsed="0.000258"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-05-03T09:56:14.048728" level="INFO">Length is 20.</msg>
+<msg time="2026-05-03T09:56:14.048850" level="INFO">${length} = 20</msg>
+<var>${length}</var>
+<arg>${json}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-05-03T09:56:14.048496" elapsed="0.000382"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${length}&gt;0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-05-03T09:56:14.049600" elapsed="0.000260"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-03T09:56:14.050367" level="INFO">${first} = {'id': 1, 'title': 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops', 'price': 109.95, 'description': 'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inc...</msg>
+<var>${first}</var>
+<arg>${json}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-03T09:56:14.050191" elapsed="0.000201"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<msg time="2026-05-03T09:56:14.051139" level="INFO">False</msg>
+<arg>${first}</arg>
+<arg>title</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-05-03T09:56:14.050948" elapsed="0.000241"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<msg time="2026-05-03T09:56:14.051657" level="INFO">False</msg>
+<arg>${first}</arg>
+<arg>price</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-05-03T09:56:14.051509" elapsed="0.000190"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<msg time="2026-05-03T09:56:14.052318" level="INFO">False</msg>
+<arg>${first}</arg>
+<arg>id</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-05-03T09:56:14.052105" elapsed="0.000259"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-05-03T09:56:14.052810" level="INFO">${price} = 109.95</msg>
+<var>${price}</var>
+<arg>${first}</arg>
+<arg>price</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-05-03T09:56:14.052654" elapsed="0.000177"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>isinstance(${price},float) or isinstance(${price},int)</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-05-03T09:56:14.053137" elapsed="0.000228"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-05-03T09:56:14.053867" level="INFO">${title} = Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</msg>
+<var>${title}</var>
+<arg>${first}</arg>
+<arg>title</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-05-03T09:56:14.053699" elapsed="0.000190"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-05-03T09:56:14.054316" level="INFO">Length is 53.</msg>
+<arg>${title}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-05-03T09:56:14.054186" elapsed="0.000167"/>
+</kw>
+<status status="PASS" start="2026-05-03T09:56:13.318785" elapsed="0.736093"/>
+</test>
+<status status="PASS" start="2026-05-03T09:56:13.316700" elapsed="0.740813"/>
 </suite>
-<status status="PASS" start="2026-05-03T09:51:18.714455" elapsed="2.157695"/>
+<status status="PASS" start="2026-05-03T09:56:10.937318" elapsed="3.124567"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="QAReports">QAReports</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Api Tests">QAReports.Api Tests</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Tests">QAReports.Api Tests.Tests</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Test Categories">QAReports.Api Tests.Tests.Test Categories</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test Categories">Tests.Test Categories</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Test Keywords">Tests.Test Keywords</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="Test Products">Tests.Test Products</stat>
 </suite>
 </statistics>
 <errors>
