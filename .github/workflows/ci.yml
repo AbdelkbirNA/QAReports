@@ -1,0 +1,49 @@
+name: Robot QA Tests + Allure Report
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install robotframework
+        pip install allure-robotframework
+
+    - name: Install Allure CLI
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y default-jre
+        wget https://github.com/allure-framework/allure2/releases/latest/download/allure-2.27.0.tgz
+        tar -zxvf allure-2.27.0.tgz
+        sudo mv allure-2.27.0 /opt/allure
+        sudo ln -s /opt/allure/bin/allure /usr/bin/allure
+
+    - name: Run Robot tests
+      run: |
+        robot \
+          --listener allure_robotframework:output/allure-results \
+          --outputdir output/robot \
+          api_tests/tests ui_tests/tests
+
+    - name: Generate Allure report
+      run: |
+        allure generate output/allure-results -o output/allure-report --clean
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: output/allure-report
