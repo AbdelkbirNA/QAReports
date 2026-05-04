@@ -1,7 +1,9 @@
 services:
 
   api-tests:
-    image: ppodgorsek/robot-framework:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     user: root
     working_dir: /tests
     volumes:
@@ -14,7 +16,9 @@ services:
       api_tests
 
   ui-tests:
-    image: ppodgorsek/robot-framework:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     user: root
     working_dir: /tests
     volumes:

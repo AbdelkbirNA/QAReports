@@ -29,11 +29,14 @@ pipeline {
     }
 
     post {
-        always {
-            allure results: [[path: 'results/allure-results']]
-            echo 'Cleaning workspace...'
-            cleanWs()
-        }
+        aalways {
+        allure includeProperties: false,
+               jdk: '',
+               results: [
+                 [path: 'results/allure-results-api'],
+                 [path: 'results/allure-results-ui']
+               ]
+    }
 
         success {
             echo 'SUCCESS 🚀 Tests OK'
