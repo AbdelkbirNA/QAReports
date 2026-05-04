@@ -29,7 +29,7 @@ pipeline {
     }
 
     post {
-        aalways {
+        always {
         allure includeProperties: false,
                jdk: '',
                results: [
