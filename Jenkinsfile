@@ -3,7 +3,7 @@ pipeline {
 
     stages {
         stage('Check Docker') {
-    s           teps {
+    steps {
                 sh 'which docker || echo "Docker not found"'
                 sh 'docker --version || echo "No docker CLI"'
                 }
