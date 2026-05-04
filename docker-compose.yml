@@ -1,0 +1,8 @@
+services:
+  robot:
+    build: .
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    shm_size: 2g
+    command: ["--outputdir", "results", "api_tests", "ui_tests"]

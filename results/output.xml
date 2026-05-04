@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.9 on linux)" generated="2026-05-04T14:12:29.268635" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/opt/robotframework/tests">
+<suite id="s1-s1" name="Api Tests" source="/opt/robotframework/tests/api_tests">
+<suite id="s1-s1-s1" name="Tests" source="/opt/robotframework/tests/api_tests/tests">
+<suite id="s1-s1-s1-s1" name="Test Categories" source="/opt/robotframework/tests/api_tests/tests/test_categories.robot">
+<test id="s1-s1-s1-s1-t1" name="Get Categories - validation" line="10">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2026-05-04T14:12:29.550753" level="INFO">GET Request : url=https://fakestoreapi.com/products/categories 
+ path_url=/products/categories 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2026-05-04T14:12:29.550912" level="INFO">GET Response : url=https://fakestoreapi.com/products/categories 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 04 May 2026 14:12:30 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"3e-cdq81BKoKIRIQmboBVN84Vj+vkM"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=9r4fK5nw%2BPCvnbNDd0Tcb3XllWVSBtI9cQyY8Hb4vX%2Fdi6djnc6rNAYfCAImhY%2BcoHZyvR2qnx1aw40FSFsy2X3sRU1Tb%2BYjnVWYfloQ3M6qVgS0NkjYJBuejhAUboaS0AFI"}]}', 'Content-Encoding': 'gzip', 'Server': 'cloudflare', 'CF-RAY': '9f6819ca6d53c1fb-MRS', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=["electronics","jewelery","men's clothing","women's clothing"] 
+ </msg>
+<msg time="2026-05-04T14:12:29.551148" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${BASE_URL}/products/categories</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2026-05-04T14:12:29.365683" elapsed="0.185492"/>
+</kw>
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2026-05-04T14:12:29.734873" level="INFO">GET Request : url=https://fakestoreapi.com/products/categories 
+ path_url=/products/categories 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2026-05-04T14:12:29.734961" level="INFO">GET Response : url=https://fakestoreapi.com/products/categories 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 04 May 2026 14:12:30 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"3e-cdq81BKoKIRIQmboBVN84Vj+vkM"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=g%2FOYROY%2F6V1vdSEpgRn%2FOqYLfvQsphr6TQtkdlWsBUEeC8EYyNMflaLUthoN8PcUNJPZbA0cVj8UGZIvfoBV%2BWvNx5VXZ8JuaqM3GgehFmom6d5CY9hKHCy%2B9oqBTn4%2FKSA6"}]}', 'Content-Encoding': 'gzip', 'Server': 'cloudflare', 'CF-RAY': '9f6819cb8dfb4912-MRS', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=["electronics","jewelery","men's clothing","women's clothing"] 
+ </msg>
+<msg time="2026-05-04T14:12:29.735908" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${BASE_URL}/products/categories</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2026-05-04T14:12:29.551361" elapsed="0.184589"/>
+</kw>
+<kw name="Valider Status Code" owner="api_keywords">
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-05-04T14:12:29.737041" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>${expected}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-05-04T14:12:29.736680" elapsed="0.000413"/>
+</kw>
+<arg>${response}</arg>
+<arg>200</arg>
+<status status="PASS" start="2026-05-04T14:12:29.736347" elapsed="0.000796"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-04T14:12:29.737502" level="INFO">${json} = ['electronics', 'jewelery', "men's clothing", "women's clothing"]</msg>
+<var>${json}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-04T14:12:29.737212" elapsed="0.000308"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-05-04T14:12:29.737663" level="INFO">Length is 4.</msg>
+<arg>${json}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-05-04T14:12:29.737583" elapsed="0.000107"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-05-04T14:12:29.737811" level="INFO">Length is 4.</msg>
+<msg time="2026-05-04T14:12:29.737852" level="INFO">${length} = 4</msg>
+<var>${length}</var>
+<arg>${json}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-05-04T14:12:29.737749" elapsed="0.000115"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${length} &gt; 0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-05-04T14:12:29.737919" elapsed="0.000112"/>
+</kw>
+<status status="PASS" start="2026-05-04T14:12:29.364936" elapsed="0.373178"/>
+</test>
+<status status="PASS" start="2026-05-04T14:12:29.292521" elapsed="0.445913"/>
+</suite>
+<suite id="s1-s1-s1-s2" name="Test Keywords" source="/opt/robotframework/tests/api_tests/tests/test_keywords.robot">
+<test id="s1-s1-s1-s2-t1" name="Test Valider Reponse Produits" line="11">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2026-05-04T14:12:30.192163" level="INFO">GET Request : url=https://fakestoreapi.com/products 
+ path_url=/products 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2026-05-04T14:12:30.192287" level="INFO">GET Response : url=https://fakestoreapi.com/products 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 04 May 2026 14:12:31 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"2990-lZ2o94A2EDKiYW3/6/3oI74HHkw"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=NLu4mmSppdz%2BllpPjV1MAxXhEw53r3mYFGZ9vS9zYUbUi77d5iBS66iWTF0VgXQRBa08zZWNxUedYN8MIFSbp8XsmJWHnv2Ww0jrZOm4Qog3jfLeYPG7tO30L8pgoAxn0xCQ"}]}', 'Content-Encoding': 'gzip', 'Server': 'cloudflare', 'CF-RAY': '9f6819ccae43c283-MAD', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":1,"title":"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops","price":109.95,"description":"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday","category":"men's clothing","image":"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png","rating":{"rate":3.9,"count":120}},{"id":2,"title":"Mens Casual Premium Slim Fit T-Shirts ","price":22.3,"description":"Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight &amp; soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.","category":"men's clothing","image":"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png","rating":{"rate":4.1,"count":259}},{"id":3,"title":"Mens Cotton Jacket","price":55.99,"description":"great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.","category":"men's clothing","image":"https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png","rating":{"rate":4.7,"count":500}},{"id":4,"title":"Mens Casual Slim Fit","price":15.99,"description":"The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.","category":"men's clothing","image":"https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png","rating":{"rate":2.1,"count":430}},{"id":5,"title":"John Hardy Women's Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet","price":695,"description":"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.","category":"jewelery","image":"https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_t.png","rating":{"rate":4.6,"count":400}},{"id":6,"title":"Solid Gold Petite Micropave ","price":168,"description":"Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.","category":"jewelery","image":"https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_t.png","rating":{"rate":3.9,"count":70}},{"id":7,"title":"White Gold Plated Princess","price":9.99,"description":"Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...","category":"jewelery","image":"https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png","rating":{"rate":3,"count":400}},{"id":8,"title":"Pierced Owl Rose Gold Plated Stainless Steel Double","price":10.99,"description":"Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel","category":"jewelery","image":"https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_t.png","rating":{"rate":1.9,"count":100}},{"id":9,"title":"WD 2TB Elements Portable External Hard Drive - USB 3.0 ","price":64,"description":"USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system","category":"electronics","image":"https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_t.png","rating":{"rate":3.3,"count":203}},{"id":10,"title":"SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s","price":109,"description":"Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)","category":"electronics","image":"https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_t.png","rating":{"rate":2.9,"count":470}},{"id":11,"title":"Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5","price":109,"description":"3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking &amp; Correction) to provide the optimized performance and enhanced reliability.","category":"electronics","image":"https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_t.png","rating":{"rate":4.8,"count":319}},{"id":12,"title":"WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive","price":114,"description":"Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty","category":"electronics","image":"https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_t.png","rating":{"rate":4.8,"count":400}},{"id":13,"title":"Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin","price":599,"description":"21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz","category":"electronics","image":"https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_t.png","rating":{"rate":2.9,"count":250}},{"id":14,"title":"Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ","price":999.99,"description":"49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag","category":"electronics","image":"https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_t.png","rating":{"rate":2.2,"count":140}},{"id":15,"title":"BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats","price":56.99,"description":"Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates","category":"women's clothing","image":"https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_t.png","rating":{"rate":2.6,"count":235}},{"id":16,"title":"Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket","price":29.95,"description":"100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON","category":"women's clothing","image":"https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_t.png","rating":{"rate":2.9,"count":340}},{"id":17,"title":"Rain Jacket Women Windbreaker Striped Climbing Raincoats","price":39.99,"description":"Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.","category":"women's clothing","image":"https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2t.png","rating":{"rate":3.8,"count":679}},{"id":18,"title":"MBJ Women's Solid Short Sleeve Boat Neck V ","price":9.85,"description":"95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem","category":"women's clothing","image":"https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_t.png","rating":{"rate":4.7,"count":130}},{"id":19,"title":"Opna Women's Short Sleeve Moisture","price":7.95,"description":"100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash &amp; Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, ... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg time="2026-05-04T14:12:30.192981" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${BASE_URL}/products</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2026-05-04T14:12:29.747592" elapsed="0.445414"/>
+</kw>
+<kw name="Valider Reponse Produits" owner="api_keywords">
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-05-04T14:12:30.193800" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.193507" elapsed="0.000339"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-04T14:12:30.194351" level="INFO">${json} = [{'id': 1, 'title': 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops', 'price': 109.95, 'description': 'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 in...</msg>
+<var>${json}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.193923" elapsed="0.000448"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-05-04T14:12:30.194505" level="INFO">Length is 20.</msg>
+<arg>${json}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.194434" elapsed="0.000104"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-05-04T14:12:30.194686" level="INFO">Length is 20.</msg>
+<msg time="2026-05-04T14:12:30.194734" level="INFO">${length} = 20</msg>
+<var>${length}</var>
+<arg>${json}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.194614" elapsed="0.000132"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${length} &gt; 0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.194802" elapsed="0.000116"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-04T14:12:30.195166" level="INFO">${first} = {'id': 1, 'title': 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops', 'price': 109.95, 'description': 'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inc...</msg>
+<var>${first}</var>
+<arg>${json}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.195047" elapsed="0.000137"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${first}</arg>
+<arg>title</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.195240" elapsed="0.000091"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${first}</arg>
+<arg>price</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.195385" elapsed="0.000076"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${first}</arg>
+<arg>id</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.195512" elapsed="0.000075"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-05-04T14:12:30.195735" level="INFO">${price} = 109.95</msg>
+<var>${price}</var>
+<arg>${first}</arg>
+<arg>price</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.195641" elapsed="0.000108"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>isinstance(${price}, float) or isinstance(${price}, int)</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.195803" elapsed="0.000132"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-05-04T14:12:30.196078" level="INFO">${title} = Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</msg>
+<var>${title}</var>
+<arg>${first}</arg>
+<arg>title</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.195992" elapsed="0.000101"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-05-04T14:12:30.196210" level="INFO">Length is 53.</msg>
+<arg>${title}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.196149" elapsed="0.000085"/>
+</kw>
+<arg>${response}</arg>
+<status status="PASS" start="2026-05-04T14:12:30.193231" elapsed="0.003044"/>
+</kw>
+<status status="PASS" start="2026-05-04T14:12:29.747279" elapsed="0.449072"/>
+</test>
+<status status="PASS" start="2026-05-04T14:12:29.738770" elapsed="0.457816"/>
+</suite>
+<suite id="s1-s1-s1-s3" name="Test Products" source="/opt/robotframework/tests/api_tests/tests/test_products.robot">
+<test id="s1-s1-s1-s3-t1" name="GET tous les produit - validations complete" line="11">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2026-05-04T14:12:30.380799" level="INFO">GET Request : url=https://fakestoreapi.com/products 
+ path_url=/products 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2026-05-04T14:12:30.380909" level="INFO">GET Response : url=https://fakestoreapi.com/products 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 04 May 2026 14:12:31 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"2990-lZ2o94A2EDKiYW3/6/3oI74HHkw"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=J9f40l0UTazOHzvuei0Rpd3zod0JJ7QWY%2FJ5l5MU2AbTCR6wGzsBDGsnXau1f4FNXSBA5d8pSqPqBiAVvefnlB105vorbyvZcNVng8B6sO9Cbz3mBFVaOYYbq68fjL3F5aez"}]}', 'Content-Encoding': 'gzip', 'Server': 'cloudflare', 'CF-RAY': '9f6819cf98bea470-MRS', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":1,"title":"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops","price":109.95,"description":"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday","category":"men's clothing","image":"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png","rating":{"rate":3.9,"count":120}},{"id":2,"title":"Mens Casual Premium Slim Fit T-Shirts ","price":22.3,"description":"Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight &amp; soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.","category":"men's clothing","image":"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png","rating":{"rate":4.1,"count":259}},{"id":3,"title":"Mens Cotton Jacket","price":55.99,"description":"great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.","category":"men's clothing","image":"https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png","rating":{"rate":4.7,"count":500}},{"id":4,"title":"Mens Casual Slim Fit","price":15.99,"description":"The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.","category":"men's clothing","image":"https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png","rating":{"rate":2.1,"count":430}},{"id":5,"title":"John Hardy Women's Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet","price":695,"description":"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.","category":"jewelery","image":"https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_t.png","rating":{"rate":4.6,"count":400}},{"id":6,"title":"Solid Gold Petite Micropave ","price":168,"description":"Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.","category":"jewelery","image":"https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_t.png","rating":{"rate":3.9,"count":70}},{"id":7,"title":"White Gold Plated Princess","price":9.99,"description":"Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...","category":"jewelery","image":"https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png","rating":{"rate":3,"count":400}},{"id":8,"title":"Pierced Owl Rose Gold Plated Stainless Steel Double","price":10.99,"description":"Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel","category":"jewelery","image":"https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_t.png","rating":{"rate":1.9,"count":100}},{"id":9,"title":"WD 2TB Elements Portable External Hard Drive - USB 3.0 ","price":64,"description":"USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system","category":"electronics","image":"https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_t.png","rating":{"rate":3.3,"count":203}},{"id":10,"title":"SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s","price":109,"description":"Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)","category":"electronics","image":"https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_t.png","rating":{"rate":2.9,"count":470}},{"id":11,"title":"Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5","price":109,"description":"3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking &amp; Correction) to provide the optimized performance and enhanced reliability.","category":"electronics","image":"https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_t.png","rating":{"rate":4.8,"count":319}},{"id":12,"title":"WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive","price":114,"description":"Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty","category":"electronics","image":"https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_t.png","rating":{"rate":4.8,"count":400}},{"id":13,"title":"Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin","price":599,"description":"21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz","category":"electronics","image":"https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_t.png","rating":{"rate":2.9,"count":250}},{"id":14,"title":"Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ","price":999.99,"description":"49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag","category":"electronics","image":"https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_t.png","rating":{"rate":2.2,"count":140}},{"id":15,"title":"BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats","price":56.99,"description":"Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates","category":"women's clothing","image":"https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_t.png","rating":{"rate":2.6,"count":235}},{"id":16,"title":"Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket","price":29.95,"description":"100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON","category":"women's clothing","image":"https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_t.png","rating":{"rate":2.9,"count":340}},{"id":17,"title":"Rain Jacket Women Windbreaker Striped Climbing Raincoats","price":39.99,"description":"Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.","category":"women's clothing","image":"https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2t.png","rating":{"rate":3.8,"count":679}},{"id":18,"title":"MBJ Women's Solid Short Sleeve Boat Neck V ","price":9.85,"description":"95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem","category":"women's clothing","image":"https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_t.png","rating":{"rate":4.7,"count":130}},{"id":19,"title":"Opna Women's Short Sleeve Moisture","price":7.95,"description":"100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash &amp; Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, ... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg time="2026-05-04T14:12:30.381630" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${BASE_URL}/products</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.198359" elapsed="0.183295"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-05-04T14:12:30.382109" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.381779" elapsed="0.000378"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-04T14:12:30.382655" level="INFO">${json} = [{'id': 1, 'title': 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops', 'price': 109.95, 'description': 'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 in...</msg>
+<var>${json}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.382240" elapsed="0.000437"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-05-04T14:12:30.382822" level="INFO">Length is 20.</msg>
+<arg>${json}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.382742" elapsed="0.000106"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-05-04T14:12:30.382966" level="INFO">Length is 20.</msg>
+<msg time="2026-05-04T14:12:30.383059" level="INFO">${length} = 20</msg>
+<var>${length}</var>
+<arg>${json}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.382905" elapsed="0.000169"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${length}&gt;0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.383133" elapsed="0.000122"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-04T14:12:30.383420" level="INFO">${first} = {'id': 1, 'title': 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops', 'price': 109.95, 'description': 'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inc...</msg>
+<var>${first}</var>
+<arg>${json}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.383318" elapsed="0.000118"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${first}</arg>
+<arg>title</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.383488" elapsed="0.000079"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${first}</arg>
+<arg>price</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.383616" elapsed="0.000083"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${first}</arg>
+<arg>id</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.383754" elapsed="0.000071"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-05-04T14:12:30.383977" level="INFO">${price} = 109.95</msg>
+<var>${price}</var>
+<arg>${first}</arg>
+<arg>price</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.383877" elapsed="0.000114"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>isinstance(${price},float) or isinstance(${price},int)</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.384042" elapsed="0.000122"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-05-04T14:12:30.384303" level="INFO">${title} = Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</msg>
+<var>${title}</var>
+<arg>${first}</arg>
+<arg>title</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.384219" elapsed="0.000099"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-05-04T14:12:30.384435" level="INFO">Length is 53.</msg>
+<arg>${title}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.384368" elapsed="0.000095"/>
+</kw>
+<status status="PASS" start="2026-05-04T14:12:30.198081" elapsed="0.186449"/>
+</test>
+<status status="PASS" start="2026-05-04T14:12:30.196898" elapsed="0.187826"/>
+</suite>
+<status status="PASS" start="2026-05-04T14:12:29.291782" elapsed="1.093260"/>
+</suite>
+<status status="PASS" start="2026-05-04T14:12:29.290771" elapsed="1.094573"/>
+</suite>
+<suite id="s1-s2" name="Ui Tests" source="/opt/robotframework/tests/ui_tests">
+<suite id="s1-s2-s1" name="Tests" source="/opt/robotframework/tests/ui_tests/tests">
+<suite id="s1-s2-s1-s1" name="Test E2E Purchase" source="/opt/robotframework/tests/ui_tests/tests/test_e2e_purchase.robot">
+<test id="s1-s2-s1-s1-t1" name="Achat Complet Produit" line="9">
+<kw name="Ouvrir Page Login" owner="login_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-04T14:12:30.540813" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-04T14:12:30.540597" elapsed="2.270960"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2026-05-04T14:12:33.192482" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-04T14:12:33.192712" level="FAIL">WebDriverException: Message: unknown error: JavaScript code failed
+from unknown command: 'Runtime.evaluate' wasn't found
+  (Session info: chrome=139.0.7258.68)
+Stacktrace:
+#0 0x563fbfc3c01a &lt;unknown&gt;
+#1 0x563fbf6dba70 &lt;unknown&gt;
+#2 0x563fbf6c31f6 &lt;unknown&gt;
+#3 0x563fbf6c1ab9 &lt;unknown&gt;
+#4 0x563fbf6c223f &lt;unknown&gt;
+#5 0x563fbf6efdc4 &lt;unknown&gt;
+#6 0x563fbf6e4a81 &lt;unknown&gt;
+#7 0x563fbf6e4971 &lt;unknown&gt;
+#8 0x563fbf6b3e3a &lt;unknown&gt;
+#9 0x563fbf6b22a4 &lt;unknown&gt;
+#10 0x563fbf78da7f &lt;unknown&gt;
+#11 0x563fbf7533e2 &lt;unknown&gt;
+#12 0x563fbf77914f &lt;unknown&gt;
+#13 0x563fbf7531b3 &lt;unknown&gt;
+#14 0x563fbf71f59b &lt;unknown&gt;
+#15 0x563fbf720971 &lt;unknown&gt;
+#16 0x563fbfc011eb &lt;unknown&gt;
+#17 0x563fbfc04f39 &lt;unknown&gt;
+#18 0x563fbfbe82c9 &lt;unknown&gt;
+#19 0x563fbfc05ae8 &lt;unknown&gt;
+#20 0x563fbfbccbaf &lt;unknown&gt;
+#21 0x563fbfc290a8 &lt;unknown&gt;
+#22 0x563fbfc29286 &lt;unknown&gt;
+#23 0x563fbfc3aff6 &lt;unknown&gt;
+#24 0x7daa8e612f54 start_thread
+#25 0x7daa8e696154 __GI___clone
+</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="FAIL" start="2026-05-04T14:12:32.811752" elapsed="0.383108">WebDriverException: Message: unknown error: JavaScript code failed
+from unknown command: 'Runtime.evaluate' wasn't found
+  (Session info: chrome=139.0.7258.68)
+Stacktrace:
+#0 0x563fbfc3c01a &lt;unknown&gt;
+#1 0x563fbf6dba70 &lt;unknown&gt;
+#2 0x563fbf6c31f6 &lt;unknown&gt;
+#3 0x563fbf6c1ab9 &lt;unknown&gt;
+#4 0x563fbf6c223f &lt;unknown&gt;
+#5 0x563fbf6efdc4 &lt;unknown&gt;
+#6 0x563fbf6e4a81 &lt;unknown&gt;
+#7 0x563fbf6e4971 &lt;unknown&gt;
+#8 0x563fbf6b3e3a &lt;unknown&gt;
+#9 0x563fbf6b22a4 &lt;unknown&gt;
+#10 0x563fbf78da7f &lt;unknown&gt;
+#11 0x563fbf7533e2 &lt;unknown&gt;
+#12 0x563fbf77914f &lt;unknown&gt;
+#13 0x563fbf7531b3 &lt;unknown&gt;
+#14 0x563fbf71f59b &lt;unknown&gt;
+#15 0x563fbf720971 &lt;unknown&gt;
+#16 0x563fbfc011eb &lt;unknown&gt;
+#17 0x563fbfc04f39 &lt;unknown&gt;
+#18 0x563fbfbe82c9 &lt;unknown&gt;
+#19 0x563fbfc05ae8 &lt;unknown&gt;
+#20 0x563fbfbccbaf &lt;unknown&gt;
+#21 0x563fbfc290a8 &lt;unknown&gt;
+#22 0x563fbfc29286 &lt;unknown&gt;
+#23 0x563fbfc3aff6 &lt;unknown&gt;
+#24 0x7daa8e612f54 start_thread
+#25 0x7daa8e696154 __GI___clone
+</status>
+</kw>
+<status status="FAIL" start="2026-05-04T14:12:30.540072" elapsed="2.655408">WebDriverException: Message: unknown error: JavaScript code failed
+from unknown command: 'Runtime.evaluate' wasn't found
+  (Session info: chrome=139.0.7258.68)
+Stacktrace:
+#0 0x563fbfc3c01a &lt;unknown&gt;
+#1 0x563fbf6dba70 &lt;unknown&gt;
+#2 0x563fbf6c31f6 &lt;unknown&gt;
+#3 0x563fbf6c1ab9 &lt;unknown&gt;
+#4 0x563fbf6c223f &lt;unknown&gt;
+#5 0x563fbf6efdc4 &lt;unknown&gt;
+#6 0x563fbf6e4a81 &lt;unknown&gt;
+#7 0x563fbf6e4971 &lt;unknown&gt;
+#8 0x563fbf6b3e3a &lt;unknown&gt;
+#9 0x563fbf6b22a4 &lt;unknown&gt;
+#10 0x563fbf78da7f &lt;unknown&gt;
+#11 0x563fbf7533e2 &lt;unknown&gt;
+#12 0x563fbf77914f &lt;unknown&gt;
+#13 0x563fbf7531b3 &lt;unknown&gt;
+#14 0x563fbf71f59b &lt;unknown&gt;
+#15 0x563fbf720971 &lt;unknown&gt;
+#16 0x563fbfc011eb &lt;unknown&gt;
+#17 0x563fbfc04f39 &lt;unknown&gt;
+#18 0x563fbfbe82c9 &lt;unknown&gt;
+#19 0x563fbfc05ae8 &lt;unknown&gt;
+#20 0x563fbfbccbaf &lt;unknown&gt;
+#21 0x563fbfc290a8 &lt;unknown&gt;
+#22 0x563fbfc29286 &lt;unknown&gt;
+#23 0x563fbfc3aff6 &lt;unknown&gt;
+#24 0x7daa8e612f54 start_thread
+#25 0x7daa8e696154 __GI___clone
+</status>
+</kw>
+<kw name="Se Connecter Avec Credentials" owner="login_page">
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<status status="NOT RUN" start="2026-05-04T14:12:33.195752" elapsed="0.000042"/>
+</kw>
+<kw name="Ajouter Premier Produit Au Panier" owner="inventory_page">
+<status status="NOT RUN" start="2026-05-04T14:12:33.195893" elapsed="0.000023"/>
+</kw>
+<kw name="Aller Au Panier" owner="inventory_page">
+<status status="NOT RUN" start="2026-05-04T14:12:33.195991" elapsed="0.000020"/>
+</kw>
+<kw name="Aller Au Checkout" owner="cart_page">
+<status status="NOT RUN" start="2026-05-04T14:12:33.196098" elapsed="0.000020"/>
+</kw>
+<kw name="Remplir Informations Client" owner="checkout_page">
+<arg>John</arg>
+<arg>Doe</arg>
+<arg>12345</arg>
+<status status="NOT RUN" start="2026-05-04T14:12:33.196195" elapsed="0.000019"/>
+</kw>
+<kw name="Confirmer Achat" owner="checkout_page">
+<status status="NOT RUN" start="2026-05-04T14:12:33.196287" elapsed="0.000018"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Thank you for your order</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2026-05-04T14:12:33.196386" elapsed="0.000020"/>
+</kw>
+<status status="FAIL" start="2026-05-04T14:12:30.539657" elapsed="2.656902">WebDriverException: Message: unknown error: JavaScript code failed
+from unknown command: 'Runtime.evaluate' wasn't found
+  (Session info: chrome=139.0.7258.68)
+Stacktrace:
+#0 0x563fbfc3c01a &lt;unknown&gt;
+#1 0x563fbf6dba70 &lt;unknown&gt;
+#2 0x563fbf6c31f6 &lt;unknown&gt;
+#3 0x563fbf6c1ab9 &lt;unknown&gt;
+#4 0x563fbf6c223f &lt;unknown&gt;
+#5 0x563fbf6efdc4 &lt;unknown&gt;
+#6 0x563fbf6e4a81 &lt;unknown&gt;
+#7 0x563fbf6e4971 &lt;unknown&gt;
+#8 0x563fbf6b3e3a &lt;unknown&gt;
+#9 0x563fbf6b22a4 &lt;unknown&gt;
+#10 0x563fbf78da7f &lt;unknown&gt;
+#11 0x563fbf7533e2 &lt;unknown&gt;
+#12 0x563fbf77914f &lt;unknown&gt;
+#13 0x563fbf7531b3 &lt;unknown&gt;
+#14 0x563fbf71f59b &lt;unknown&gt;
+#15 0x563fbf720971 &lt;unknown&gt;
+#16 0x563fbfc011eb &lt;unknown&gt;
+#17 0x563fbfc04f39 &lt;unknown&gt;
+#18 0x563fbfbe82c9 &lt;unknown&gt;
+#19 0x563fbfc05ae8 &lt;unknown&gt;
+#20 0x563fbfbccbaf &lt;unknown&gt;
+#21 0x563fbfc290a8 &lt;unknown&gt;
+#22 0x563fbfc29286 &lt;unknown&gt;
+#23 0x563fbfc3aff6 &lt;unknown&gt;
+#24 0x7daa8e612f54 start_thread
+#25 0x7daa8e696154 __GI___clone
+</status>
+</test>
+<status status="FAIL" start="2026-05-04T14:12:30.386935" elapsed="2.809927"/>
+</suite>
+<suite id="s1-s2-s1-s2" name="Test Login" source="/opt/robotframework/tests/ui_tests/tests/test_login.robot">
+<test id="s1-s2-s1-s2-t1" name="Login Valide SauceDemo" line="6">
+<kw name="Ouvrir Page Login" owner="login_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-04T14:12:33.210918" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-04T14:12:33.210727" elapsed="1.253101"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2026-05-04T14:12:34.844025" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-04T14:12:34.844240" level="FAIL">WebDriverException: Message: unknown error: JavaScript code failed
+from unknown command: 'Runtime.evaluate' wasn't found
+  (Session info: chrome=139.0.7258.68)
+Stacktrace:
+#0 0x5a3963fdd01a &lt;unknown&gt;
+#1 0x5a3963a7ca70 &lt;unknown&gt;
+#2 0x5a3963a641f6 &lt;unknown&gt;
+#3 0x5a3963a62ab9 &lt;unknown&gt;
+#4 0x5a3963a6323f &lt;unknown&gt;
+#5 0x5a3963a90dc4 &lt;unknown&gt;
+#6 0x5a3963a85a81 &lt;unknown&gt;
+#7 0x5a3963a85971 &lt;unknown&gt;
+#8 0x5a3963a54e3a &lt;unknown&gt;
+#9 0x5a3963a532a4 &lt;unknown&gt;
+#10 0x5a3963b2ea7f &lt;unknown&gt;
+#11 0x5a3963af43e2 &lt;unknown&gt;
+#12 0x5a3963b1a14f &lt;unknown&gt;
+#13 0x5a3963af41b3 &lt;unknown&gt;
+#14 0x5a3963ac059b &lt;unknown&gt;
+#15 0x5a3963ac1971 &lt;unknown&gt;
+#16 0x5a3963fa21eb &lt;unknown&gt;
+#17 0x5a3963fa5f39 &lt;unknown&gt;
+#18 0x5a3963f892c9 &lt;unknown&gt;
+#19 0x5a3963fa6ae8 &lt;unknown&gt;
+#20 0x5a3963f6dbaf &lt;unknown&gt;
+#21 0x5a3963fca0a8 &lt;unknown&gt;
+#22 0x5a3963fca286 &lt;unknown&gt;
+#23 0x5a3963fdbff6 &lt;unknown&gt;
+#24 0x765989687f54 start_thread
+#25 0x76598970b154 __GI___clone
+</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="FAIL" start="2026-05-04T14:12:34.464080" elapsed="0.380959">WebDriverException: Message: unknown error: JavaScript code failed
+from unknown command: 'Runtime.evaluate' wasn't found
+  (Session info: chrome=139.0.7258.68)
+Stacktrace:
+#0 0x5a3963fdd01a &lt;unknown&gt;
+#1 0x5a3963a7ca70 &lt;unknown&gt;
+#2 0x5a3963a641f6 &lt;unknown&gt;
+#3 0x5a3963a62ab9 &lt;unknown&gt;
+#4 0x5a3963a6323f &lt;unknown&gt;
+#5 0x5a3963a90dc4 &lt;unknown&gt;
+#6 0x5a3963a85a81 &lt;unknown&gt;
+#7 0x5a3963a85971 &lt;unknown&gt;
+#8 0x5a3963a54e3a &lt;unknown&gt;
+#9 0x5a3963a532a4 &lt;unknown&gt;
+#10 0x5a3963b2ea7f &lt;unknown&gt;
+#11 0x5a3963af43e2 &lt;unknown&gt;
+#12 0x5a3963b1a14f &lt;unknown&gt;
+#13 0x5a3963af41b3 &lt;unknown&gt;
+#14 0x5a3963ac059b &lt;unknown&gt;
+#15 0x5a3963ac1971 &lt;unknown&gt;
+#16 0x5a3963fa21eb &lt;unknown&gt;
+#17 0x5a3963fa5f39 &lt;unknown&gt;
+#18 0x5a3963f892c9 &lt;unknown&gt;
+#19 0x5a3963fa6ae8 &lt;unknown&gt;
+#20 0x5a3963f6dbaf &lt;unknown&gt;
+#21 0x5a3963fca0a8 &lt;unknown&gt;
+#22 0x5a3963fca286 &lt;unknown&gt;
+#23 0x5a3963fdbff6 &lt;unknown&gt;
+#24 0x765989687f54 start_thread
+#25 0x76598970b154 __GI___clone
+</status>
+</kw>
+<status status="FAIL" start="2026-05-04T14:12:33.210460" elapsed="1.634761">WebDriverException: Message: unknown error: JavaScript code failed
+from unknown command: 'Runtime.evaluate' wasn't found
+  (Session info: chrome=139.0.7258.68)
+Stacktrace:
+#0 0x5a3963fdd01a &lt;unknown&gt;
+#1 0x5a3963a7ca70 &lt;unknown&gt;
+#2 0x5a3963a641f6 &lt;unknown&gt;
+#3 0x5a3963a62ab9 &lt;unknown&gt;
+#4 0x5a3963a6323f &lt;unknown&gt;
+#5 0x5a3963a90dc4 &lt;unknown&gt;
+#6 0x5a3963a85a81 &lt;unknown&gt;
+#7 0x5a3963a85971 &lt;unknown&gt;
+#8 0x5a3963a54e3a &lt;unknown&gt;
+#9 0x5a3963a532a4 &lt;unknown&gt;
+#10 0x5a3963b2ea7f &lt;unknown&gt;
+#11 0x5a3963af43e2 &lt;unknown&gt;
+#12 0x5a3963b1a14f &lt;unknown&gt;
+#13 0x5a3963af41b3 &lt;unknown&gt;
+#14 0x5a3963ac059b &lt;unknown&gt;
+#15 0x5a3963ac1971 &lt;unknown&gt;
+#16 0x5a3963fa21eb &lt;unknown&gt;
+#17 0x5a3963fa5f39 &lt;unknown&gt;
+#18 0x5a3963f892c9 &lt;unknown&gt;
+#19 0x5a3963fa6ae8 &lt;unknown&gt;
+#20 0x5a3963f6dbaf &lt;unknown&gt;
+#21 0x5a3963fca0a8 &lt;unknown&gt;
+#22 0x5a3963fca286 &lt;unknown&gt;
+#23 0x5a3963fdbff6 &lt;unknown&gt;
+#24 0x765989687f54 start_thread
+#25 0x76598970b154 __GI___clone
+</status>
+</kw>
+<kw name="Se Connecter Avec Credentials" owner="login_page">
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<status status="NOT RUN" start="2026-05-04T14:12:34.845436" elapsed="0.000036"/>
+</kw>
+<kw name="Verifier Login Reussi" owner="login_page">
+<status status="NOT RUN" start="2026-05-04T14:12:34.845915" elapsed="0.000039"/>
+</kw>
+<kw name="Fermer Browser" owner="login_page">
+<status status="NOT RUN" start="2026-05-04T14:12:34.846041" elapsed="0.000020"/>
+</kw>
+<status status="FAIL" start="2026-05-04T14:12:33.210073" elapsed="1.636129">WebDriverException: Message: unknown error: JavaScript code failed
+from unknown command: 'Runtime.evaluate' wasn't found
+  (Session info: chrome=139.0.7258.68)
+Stacktrace:
+#0 0x5a3963fdd01a &lt;unknown&gt;
+#1 0x5a3963a7ca70 &lt;unknown&gt;
+#2 0x5a3963a641f6 &lt;unknown&gt;
+#3 0x5a3963a62ab9 &lt;unknown&gt;
+#4 0x5a3963a6323f &lt;unknown&gt;
+#5 0x5a3963a90dc4 &lt;unknown&gt;
+#6 0x5a3963a85a81 &lt;unknown&gt;
+#7 0x5a3963a85971 &lt;unknown&gt;
+#8 0x5a3963a54e3a &lt;unknown&gt;
+#9 0x5a3963a532a4 &lt;unknown&gt;
+#10 0x5a3963b2ea7f &lt;unknown&gt;
+#11 0x5a3963af43e2 &lt;unknown&gt;
+#12 0x5a3963b1a14f &lt;unknown&gt;
+#13 0x5a3963af41b3 &lt;unknown&gt;
+#14 0x5a3963ac059b &lt;unknown&gt;
+#15 0x5a3963ac1971 &lt;unknown&gt;
+#16 0x5a3963fa21eb &lt;unknown&gt;
+#17 0x5a3963fa5f39 &lt;unknown&gt;
+#18 0x5a3963f892c9 &lt;unknown&gt;
+#19 0x5a3963fa6ae8 &lt;unknown&gt;
+#20 0x5a3963f6dbaf &lt;unknown&gt;
+#21 0x5a3963fca0a8 &lt;unknown&gt;
+#22 0x5a3963fca286 &lt;unknown&gt;
+#23 0x5a3963fdbff6 &lt;unknown&gt;
+#24 0x765989687f54 start_thread
+#25 0x76598970b154 __GI___clone
+</status>
+</test>
+<test id="s1-s2-s1-s2-t2" name="Login Invalide - utilisateur incorrect" line="11">
+<kw name="Ouvrir Page Login" owner="login_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-04T14:12:34.847628" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-04T14:12:34.847355" elapsed="1.315574"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2026-05-04T14:12:36.541174" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-04T14:12:36.541391" level="FAIL">WebDriverException: Message: unknown error: JavaScript code failed
+from unknown command: 'Runtime.evaluate' wasn't found
+  (Session info: chrome=139.0.7258.68)
+Stacktrace:
+#0 0x5c8bff5af01a &lt;unknown&gt;
+#1 0x5c8bff04ea70 &lt;unknown&gt;
+#2 0x5c8bff0361f6 &lt;unknown&gt;
+#3 0x5c8bff034ab9 &lt;unknown&gt;
+#4 0x5c8bff03523f &lt;unknown&gt;
+#5 0x5c8bff062dc4 &lt;unknown&gt;
+#6 0x5c8bff057a81 &lt;unknown&gt;
+#7 0x5c8bff057971 &lt;unknown&gt;
+#8 0x5c8bff026e3a &lt;unknown&gt;
+#9 0x5c8bff0252a4 &lt;unknown&gt;
+#10 0x5c8bff100a7f &lt;unknown&gt;
+#11 0x5c8bff0c63e2 &lt;unknown&gt;
+#12 0x5c8bff0ec14f &lt;unknown&gt;
+#13 0x5c8bff0c61b3 &lt;unknown&gt;
+#14 0x5c8bff09259b &lt;unknown&gt;
+#15 0x5c8bff093971 &lt;unknown&gt;
+#16 0x5c8bff5741eb &lt;unknown&gt;
+#17 0x5c8bff577f39 &lt;unknown&gt;
+#18 0x5c8bff55b2c9 &lt;unknown&gt;
+#19 0x5c8bff578ae8 &lt;unknown&gt;
+#20 0x5c8bff53fbaf &lt;unknown&gt;
+#21 0x5c8bff59c0a8 &lt;unknown&gt;
+#22 0x5c8bff59c286 &lt;unknown&gt;
+#23 0x5c8bff5adff6 &lt;unknown&gt;
+#24 0x7a7daccabf54 start_thread
+#25 0x7a7dacd2f154 __GI___clone
+</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="FAIL" start="2026-05-04T14:12:36.163190" elapsed="0.378988">WebDriverException: Message: unknown error: JavaScript code failed
+from unknown command: 'Runtime.evaluate' wasn't found
+  (Session info: chrome=139.0.7258.68)
+Stacktrace:
+#0 0x5c8bff5af01a &lt;unknown&gt;
+#1 0x5c8bff04ea70 &lt;unknown&gt;
+#2 0x5c8bff0361f6 &lt;unknown&gt;
+#3 0x5c8bff034ab9 &lt;unknown&gt;
+#4 0x5c8bff03523f &lt;unknown&gt;
+#5 0x5c8bff062dc4 &lt;unknown&gt;
+#6 0x5c8bff057a81 &lt;unknown&gt;
+#7 0x5c8bff057971 &lt;unknown&gt;
+#8 0x5c8bff026e3a &lt;unknown&gt;
+#9 0x5c8bff0252a4 &lt;unknown&gt;
+#10 0x5c8bff100a7f &lt;unknown&gt;
+#11 0x5c8bff0c63e2 &lt;unknown&gt;
+#12 0x5c8bff0ec14f &lt;unknown&gt;
+#13 0x5c8bff0c61b3 &lt;unknown&gt;
+#14 0x5c8bff09259b &lt;unknown&gt;
+#15 0x5c8bff093971 &lt;unknown&gt;
+#16 0x5c8bff5741eb &lt;unknown&gt;
+#17 0x5c8bff577f39 &lt;unknown&gt;
+#18 0x5c8bff55b2c9 &lt;unknown&gt;
+#19 0x5c8bff578ae8 &lt;unknown&gt;
+#20 0x5c8bff53fbaf &lt;unknown&gt;
+#21 0x5c8bff59c0a8 &lt;unknown&gt;
+#22 0x5c8bff59c286 &lt;unknown&gt;
+#23 0x5c8bff5adff6 &lt;unknown&gt;
+#24 0x7a7daccabf54 start_thread
+#25 0x7a7dacd2f154 __GI___clone
+</status>
+</kw>
+<status status="FAIL" start="2026-05-04T14:12:34.846916" elapsed="1.695421">WebDriverException: Message: unknown error: JavaScript code failed
+from unknown command: 'Runtime.evaluate' wasn't found
+  (Session info: chrome=139.0.7258.68)
+Stacktrace:
+#0 0x5c8bff5af01a &lt;unknown&gt;
+#1 0x5c8bff04ea70 &lt;unknown&gt;
+#2 0x5c8bff0361f6 &lt;unknown&gt;
+#3 0x5c8bff034ab9 &lt;unknown&gt;
+#4 0x5c8bff03523f &lt;unknown&gt;
+#5 0x5c8bff062dc4 &lt;unknown&gt;
+#6 0x5c8bff057a81 &lt;unknown&gt;
+#7 0x5c8bff057971 &lt;unknown&gt;
+#8 0x5c8bff026e3a &lt;unknown&gt;
+#9 0x5c8bff0252a4 &lt;unknown&gt;
+#10 0x5c8bff100a7f &lt;unknown&gt;
+#11 0x5c8bff0c63e2 &lt;unknown&gt;
+#12 0x5c8bff0ec14f &lt;unknown&gt;
+#13 0x5c8bff0c61b3 &lt;unknown&gt;
+#14 0x5c8bff09259b &lt;unknown&gt;
+#15 0x5c8bff093971 &lt;unknown&gt;
+#16 0x5c8bff5741eb &lt;unknown&gt;
+#17 0x5c8bff577f39 &lt;unknown&gt;
+#18 0x5c8bff55b2c9 &lt;unknown&gt;
+#19 0x5c8bff578ae8 &lt;unknown&gt;
+#20 0x5c8bff53fbaf &lt;unknown&gt;
+#21 0x5c8bff59c0a8 &lt;unknown&gt;
+#22 0x5c8bff59c286 &lt;unknown&gt;
+#23 0x5c8bff5adff6 &lt;unknown&gt;
+#24 0x7a7daccabf54 start_thread
+#25 0x7a7dacd2f154 __GI___clone
+</status>
+</kw>
+<kw name="Se Connecter Avec Credentials" owner="login_page">
+<arg>wrong_user</arg>
+<arg>wrong_pass</arg>
+<status status="NOT RUN" start="2026-05-04T14:12:36.542541" elapsed="0.000040"/>
+</kw>
+<kw name="Verifier Login Echoue" owner="login_page">
+<status status="NOT RUN" start="2026-05-04T14:12:36.542686" elapsed="0.000024"/>
+</kw>
+<kw name="Fermer Browser" owner="login_page">
+<status status="NOT RUN" start="2026-05-04T14:12:36.542870" elapsed="0.000033"/>
+</kw>
+<status status="FAIL" start="2026-05-04T14:12:34.846444" elapsed="1.696644">WebDriverException: Message: unknown error: JavaScript code failed
+from unknown command: 'Runtime.evaluate' wasn't found
+  (Session info: chrome=139.0.7258.68)
+Stacktrace:
+#0 0x5c8bff5af01a &lt;unknown&gt;
+#1 0x5c8bff04ea70 &lt;unknown&gt;
+#2 0x5c8bff0361f6 &lt;unknown&gt;
+#3 0x5c8bff034ab9 &lt;unknown&gt;
+#4 0x5c8bff03523f &lt;unknown&gt;
+#5 0x5c8bff062dc4 &lt;unknown&gt;
+#6 0x5c8bff057a81 &lt;unknown&gt;
+#7 0x5c8bff057971 &lt;unknown&gt;
+#8 0x5c8bff026e3a &lt;unknown&gt;
+#9 0x5c8bff0252a4 &lt;unknown&gt;
+#10 0x5c8bff100a7f &lt;unknown&gt;
+#11 0x5c8bff0c63e2 &lt;unknown&gt;
+#12 0x5c8bff0ec14f &lt;unknown&gt;
+#13 0x5c8bff0c61b3 &lt;unknown&gt;
+#14 0x5c8bff09259b &lt;unknown&gt;
+#15 0x5c8bff093971 &lt;unknown&gt;
+#16 0x5c8bff5741eb &lt;unknown&gt;
+#17 0x5c8bff577f39 &lt;unknown&gt;
+#18 0x5c8bff55b2c9 &lt;unknown&gt;
+#19 0x5c8bff578ae8 &lt;unknown&gt;
+#20 0x5c8bff53fbaf &lt;unknown&gt;
+#21 0x5c8bff59c0a8 &lt;unknown&gt;
+#22 0x5c8bff59c286 &lt;unknown&gt;
+#23 0x5c8bff5adff6 &lt;unknown&gt;
+#24 0x7a7daccabf54 start_thread
+#25 0x7a7dacd2f154 __GI___clone
+</status>
+</test>
+<status status="FAIL" start="2026-05-04T14:12:33.197312" elapsed="3.346073"/>
+</suite>
+<status status="FAIL" start="2026-05-04T14:12:30.386376" elapsed="6.157497"/>
+</suite>
+<status status="FAIL" start="2026-05-04T14:12:30.385593" elapsed="6.158837"/>
+</suite>
+<status status="FAIL" start="2026-05-04T14:12:29.270701" elapsed="7.274250"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="3" fail="3" skip="0">Tests</stat>
+<stat name="Api Tests" id="s1-s1" pass="3" fail="0" skip="0">Tests.Api Tests</stat>
+<stat name="Tests" id="s1-s1-s1" pass="3" fail="0" skip="0">Tests.Api Tests.Tests</stat>
+<stat name="Test Categories" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Tests.Api Tests.Tests.Test Categories</stat>
+<stat name="Test Keywords" id="s1-s1-s1-s2" pass="1" fail="0" skip="0">Tests.Api Tests.Tests.Test Keywords</stat>
+<stat name="Test Products" id="s1-s1-s1-s3" pass="1" fail="0" skip="0">Tests.Api Tests.Tests.Test Products</stat>
+<stat name="Ui Tests" id="s1-s2" pass="0" fail="3" skip="0">Tests.Ui Tests</stat>
+<stat name="Tests" id="s1-s2-s1" pass="0" fail="3" skip="0">Tests.Ui Tests.Tests</stat>
+<stat name="Test E2E Purchase" id="s1-s2-s1-s1" pass="0" fail="1" skip="0">Tests.Ui Tests.Tests.Test E2E Purchase</stat>
+<stat name="Test Login" id="s1-s2-s1-s2" pass="0" fail="2" skip="0">Tests.Ui Tests.Tests.Test Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
