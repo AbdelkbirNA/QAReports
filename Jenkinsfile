@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        
+
         stage('Checkout Code') {
             steps {
                 git url: 'https://github.com/AbdelkbirNA/QAReports.git', branch: 'main'
@@ -11,29 +11,30 @@ pipeline {
 
         stage('Prepare Folders') {
             steps {
-                sh 'mkdir -p results'
+                bat 'if not exist results mkdir results'
             }
         }
 
         stage('Run Tests with Docker') {
             steps {
-            sh 'docker compose up --build --abort-on-container-exit'            }
+                bat 'docker compose up --build --abort-on-container-exit'
+            }
         }
 
         stage('Check Results') {
             steps {
-                sh 'ls -R results || true'
+                bat 'dir /s results'
             }
         }
 
         stage('Generate Allure Report') {
             steps {
-                sh '''
-                    if [ -d results/allure-results ]; then
-                        allure generate results/allure-results -o results/allure-report --clean
-                    else
-                        echo "No Allure results found"
-                    fi
+                bat '''
+                if exist results\\allure-results (
+                    allure generate results\\allure-results -o results\\allure-report --clean
+                ) else (
+                    echo No Allure results found
+                )
                 '''
             }
         }
