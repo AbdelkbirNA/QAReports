@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon May 04 15:03:08 GMT 2026","Mon May 04 15:03:09 GMT 2026","1081","","Tests","Test Login","","","Login Invalide - utilisateur incorrect","Vérifie qu'un login invalide affiche un message d'erreur."
+"failed","Mon May 04 15:02:54 GMT 2026","Mon May 04 15:03:07 GMT 2026","12586","","Tests","Test E2E Purchase","","","Achat Complet Produit","Vérifie le parcours d'achat complet sur SauceDemo."
+"passed","Mon May 04 15:02:54 GMT 2026","Mon May 04 15:02:54 GMT 2026","232","","Tests","Test Categories","","","Get Categories - validation","Vérifie que l'endpoint des catégories retourne une liste non vide."
+"passed","Mon May 04 15:02:54 GMT 2026","Mon May 04 15:02:54 GMT 2026","218","","Tests","Test Keywords","","","Test Valider Reponse Produits","Vérifie le helper de validation des produits."
+"passed","Mon May 04 15:03:07 GMT 2026","Mon May 04 15:03:08 GMT 2026","944","","Tests","Test Login","","","Login Valide SauceDemo","Vérifie un login valide sur SauceDemo."
+"passed","Mon May 04 15:02:54 GMT 2026","Mon May 04 15:02:55 GMT 2026","230","","Tests","Test Products","","","GET tous les produit - validations complete","Vérifie que l'endpoint produits retourne un catalogue valide."
