@@ -2,7 +2,12 @@ pipeline {
     agent any
 
     stages {
-
+        stage('Check Docker') {
+    s           teps {
+                sh 'which docker || echo "Docker not found"'
+                sh 'docker --version || echo "No docker CLI"'
+                }
+                }
         stage('Checkout Code') {
             steps {
                 git url: 'https://github.com/AbdelkbirNA/QAReports.git', branch: 'main'
