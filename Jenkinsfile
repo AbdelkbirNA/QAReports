@@ -17,7 +17,7 @@ pipeline {
 
         stage('Run Tests with Docker') {
             steps {
-                bat 'docker compose up --build --abort-on-container-exit'
+                bat 'docker compose up --build'
             }
         }
 
