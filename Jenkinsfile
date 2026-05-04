@@ -11,7 +11,7 @@ pipeline {
 
         stage('Prepare Folders') {
             steps {
-                bat 'if not exist results mkdir results'
+                bat 'if not exist results\\allure-results mkdir results\\allure-results'
             }
         }
 
@@ -26,22 +26,11 @@ pipeline {
                 bat 'dir /s results'
             }
         }
-
-        stage('Generate Allure Report') {
-            steps {
-                bat '''
-                if exist results\\allure-results (
-                    allure generate results\\allure-results -o results\\allure-report --clean
-                ) else (
-                    echo No Allure results found
-                )
-                '''
-            }
-        }
     }
 
     post {
         always {
+            allure results: [[path: 'results/allure-results']]
             echo 'Cleaning workspace...'
             cleanWs()
         }
