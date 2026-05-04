@@ -1,21 +1,18 @@
 *** Settings ***
 Library    RequestsLibrary
-Library    Collections
-Resource    ../resources/api_keywords.robot
+Resource    ../resources/api_keywords.resource
+
+Documentation    Validates category responses from the Fake Store API.
+
 
 *** Variables ***
 ${BASE_URL}    https://fakestoreapi.com
 
+
 *** Test Cases ***
 Get Categories - validation
-    ${response}=    GET     ${BASE_URL}/products/categories
+    [Documentation]    Vérifie que l'endpoint des catégories retourne une liste non vide.
     ${response}=    GET    ${BASE_URL}/products/categories
-
     Valider Status Code    ${response}    200
+    Valider Categories    ${response.json()}
 
-    ${json}=    Set Variable    ${response.json()}
-
-    Should Not Be Empty    ${json}
-
-    ${length}=    Get Length    ${json}
-    Should Be True    ${length} > 0

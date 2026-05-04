@@ -8,13 +8,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         ca-certificates \
-        chromium \
-        chromium-driver \
         fonts-liberation \
-        xauth \
-        xvfb \
-        wget \
-        gnupg \
         libnss3 \
         libxss1 \
         libasound2 \
@@ -43,5 +37,5 @@ WORKDIR /workspace
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-ENTRYPOINT ["xvfb-run", "-a", "robot"]
+ENTRYPOINT ["robot"]
 CMD ["--outputdir", "results", "api_tests", "ui_tests"]

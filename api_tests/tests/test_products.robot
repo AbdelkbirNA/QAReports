@@ -1,6 +1,8 @@
 *** Settings ***
 Library     RequestsLibrary
-Library     Collections
+Resource    ../resources/api_keywords.resource
+
+Documentation    Validates the products endpoint of the Fake Store API.
 
 
 *** Variables ***
@@ -9,19 +11,7 @@ ${BASE_URL}     https://fakestoreapi.com
 
 *** Test Cases ***
 GET tous les produit - validations complete
+    [Documentation]    Vérifie que l'endpoint produits retourne un catalogue valide.
     ${response}=    GET    ${BASE_URL}/products
-    Should Be Equal As Integers    ${response.status_code}    200
-    ${json}=    Set Variable    ${response.json()}
-    Should Not Be Empty    ${json}
-    ${length}=    Get Length    ${json}
-    Should Be True    ${length}>0
-    ${first}=    Set Variable    ${json}[0]
-    Dictionary Should Contain Key    ${first}    title
-    Dictionary Should Contain Key    ${first}    price
-    Dictionary Should Contain Key    ${first}    id
+    Valider Reponse Produits    ${response}
 
-    ${price}=    Get From Dictionary    ${first}    price
-    Should Be True    isinstance(${price},float) or isinstance(${price},int)
-
-    ${title}=    Get From Dictionary    ${first}    title
-    Should Not Be Empty    ${title}
