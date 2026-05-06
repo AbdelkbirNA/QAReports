@@ -42,3 +42,10 @@ Verifier Login Echoue
     Wait For Elements State    ${ERROR_MESSAGE}    visible
     ${error_message}=    Get Text    ${ERROR_MESSAGE}
     Should Be Equal As Strings    ${error_message}    ${INVALID_LOGIN_ERROR}
+
+Verifier Message Erreur Egal
+    [Documentation]    Vérifie qu'un message d'erreur précis est affiché.
+    [Arguments]    ${expected_message}
+    Wait For Elements State    ${ERROR_MESSAGE}    visible
+    ${error_message}=    Get Text    ${ERROR_MESSAGE}
+    Should Be Equal As Strings    ${error_message}    ${expected_message}

@@ -42,3 +42,32 @@ Valider Status Code
     [Documentation]    Vérifie qu'un code HTTP est conforme.
     [Arguments]    ${response}    ${expected}
     Should Be Equal As Integers    ${response.status_code}    ${expected}
+
+Valider Produit Unique
+    [Documentation]    Vérifie la structure d'un produit unique retourné par l'API.
+    [Arguments]    ${product}
+    Dictionary Should Contain Key    ${product}    id
+    Dictionary Should Contain Key    ${product}    title
+    Dictionary Should Contain Key    ${product}    price
+    Dictionary Should Contain Key    ${product}    category
+    ${id}=    Get From Dictionary    ${product}    id
+    ${price}=    Get From Dictionary    ${product}    price
+    ${title}=    Get From Dictionary    ${product}    title
+    Should Be True    isinstance(${id}, int)
+    Should Be True    ${id} > 0
+    Should Be True    isinstance(${price}, float) or isinstance(${price}, int)
+    Should Be True    ${price} > 0
+    Should Not Be Empty    ${title}
+
+Valider Limite Resultats
+    [Documentation]    Vérifie que l'API respecte un nombre de résultats attendu.
+    [Arguments]    ${json}    ${expected}
+    ${length}=    Get Length    ${json}
+    Should Be Equal As Integers    ${length}    ${expected}
+
+Valider Categories Produits
+    [Documentation]    Vérifie que les catégories des produits existent dans la liste de catégories.
+    [Arguments]    ${products}    ${categories}
+    ${first}=    Get From List    ${products}    0
+    ${category}=    Get From Dictionary    ${first}    category
+    List Should Contain Value    ${categories}    ${category}
